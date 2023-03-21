@@ -1,0 +1,2 @@
+---
+- include_tasks: gateway-bridge-deploy.yml

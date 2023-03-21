@@ -1,0 +1,35 @@
+---
+- name: create wireguard dir
+  ansible.builtin.file:
+    path: "{{ wireguard_home_dir }}/config"
+    state: directory
+    mode: '0755'
+
+- name: re-create wireguard container
+  docker_container:
+    name: Wireguard
+    image: lscr.io/linuxserver/wireguard:latest
+    state: started
+    recreate: yes
+    restart_policy: unless-stopped
+    capabilities:
+      - NET_ADMIN
+      - SYS_MODULE
+    env:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: "Europe/Berlin"
+      PEERS: "basti_nb,basti_sm,debo_sm"
+      SERVERURL: "adeckfs7ph1epoia.myfritz.net"
+      SERVERPORT: "51820"
+    ports:
+      - 51820:51820/udp
+    volumes:
+      - "{{ wireguard_home_dir }}/config:/config"
+      - "/lib/modules:/lib/modules"
+    sysctls:
+      net.ipv4.conf.all.src_valid_mark: 1
+#      net.ipv4.ip_forward: 1
+#      net.ipv6.conf.all.disable_ipv6: 0
+#      net.ipv6.conf.all.forwarding: 1
+#      net.ipv6.conf.default.forwarding: 1

@@ -1,0 +1,4 @@
+---
+nodered_home_dir: /opt/nodered
+nodered_owner: root
+nodered_group: root

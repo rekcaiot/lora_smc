@@ -1,0 +1,22 @@
+---
+- name: create dynv6 dir
+  ansible.builtin.file:
+    path: "{{ dynv6_home_dir }}"
+    state: directory
+    mode: '0755'
+- name: copy dynv6 script config
+  ansible.builtin.copy:
+    src: "files/dynv6.sh"
+    dest: "{{ dynv6_home_dir }}/dynv6.sh"
+    owner: "root"
+    group: "root"
+    mode: '0744'
+- name: creates an entry "@reboot dynv6.sh"
+  ansible.builtin.cron:
+    name: "update_dynv6_on_reboot"
+    special_time: reboot
+    job: "token={{ dynv6_password }} {{ dynv6_home_dir }}/dynv6.sh zestizu.dynv6.net"
+- name: creates an entry "* * * * * dynv6.sh"
+  ansible.builtin.cron:
+    name: "update_dynv6_every_minute"
+    job: "token={{ dynv6_password }} {{ dynv6_home_dir }}/dynv6.sh zestizu.dynv6.net"

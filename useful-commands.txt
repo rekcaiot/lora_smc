@@ -1,0 +1,5 @@
+Ansible:
+ansible-playbook --ask-vault-pass -i inventory -k deploy-home-network.yml
+
+ansible-vault encrypt --vault-id rekca.home@prompt vault.yml
+ansible-vault decrypt vault.yml

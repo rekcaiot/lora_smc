@@ -1,0 +1,53 @@
+---
+- name: include postgres init role for v4
+  include_role: 
+    name: postgres
+    tasks_from: postgres-init-chirpstack-v4
+  vars:
+    postgres_instance_name: "{{ postgres_name }}"
+- name: include postgres deploy role for v4
+  include_role: 
+    name: postgres
+    tasks_from: postgres-deploy
+  vars:
+    postgres_instance_name: "{{ postgres_name }}"
+    postgres_instance_port: "{{ postgres_port }}"
+
+- name: include redis deploy role for v4
+  include_role: 
+    name: redis
+    tasks_from: redis-deploy
+  vars:
+    redis_instance_name: "{{ redis_name }}"
+    redis_instance_port: "{{ redis_port }}"
+
+- name: create chirpstack v4 directory
+  ansible.builtin.file:
+    path: "{{ chirpstack_application_server_dir }}"
+    state: directory
+    mode: '0755'
+- name: copy chirpstack v4 config
+  ansible.builtin.template:
+    src: chirpstack-v4.toml
+    dest: "{{ chirpstack_application_server_dir }}/chirpstack-v4.toml"
+    owner: "{{ chirpstack_owner }}"
+    group: "{{ chirpstack_group }}"
+    mode: '0644'
+- name: copy chirpstack v4 eu_868 config
+  ansible.builtin.template:
+    src: region_eu868.toml
+    dest: "{{ chirpstack_application_server_dir }}/region_eu868.toml"
+    owner: "{{ chirpstack_owner }}"
+    group: "{{ chirpstack_group }}"
+    mode: '0644'
+- name: re-create chirpstack v4 container
+  docker_container:
+    name: Chirpstack_v4
+    image: chirpstack/chirpstack:4.2.0
+    state: started
+    command: -c /etc/chirpstack
+    recreate: yes
+    restart_policy: always
+    network_mode: host
+    volumes:
+      - "{{ chirpstack_application_server_dir }}:/etc/chirpstack"

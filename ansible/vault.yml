@@ -1,0 +1,11 @@
+---
+ansible_ssh_password: 
+git_token: 
+certs_key_password: 
+mqtt_password: 
+mqtt_user: 
+postgres_chirpstack_jwt_secret: 
+postgres_chirpstack_as_password: 
+postgres_chirpstack_ns_password: 
+postgres_chirpstack_password: 
+postgres_root_password: 

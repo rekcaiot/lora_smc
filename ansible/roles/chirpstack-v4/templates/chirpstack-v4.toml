@@ -1,0 +1,39 @@
+[logging]
+level="info"
+
+[postgresql]
+dsn="postgres://chirpstack:{{ postgres_chirpstack_password }}@localhost:{{ postgres_port }}/chirpstack?sslmode=disable"
+max_open_connections=10
+min_idle_connections=0
+
+[redis]
+servers=[
+"redis://localhost:{{ redis_port }}",
+]
+tls_enabled=false
+cluster=false
+
+[network]
+net_id="000000"
+enabled_regions=[
+"eu868"
+]
+
+[api]
+bind="0.0.0.0:8080"
+secret="{{ postgres_chirpstack_jwt_secret }}"
+
+[integration]
+enabled=["mqtt"]
+
+[integration.mqtt]
+json=true
+server="tcp://localhost:1883"
+username="{{ mqtt_user }}"
+password="{{ mqtt_password }}"
+qos=2
+max_reconnect_interval="1m0s"
+clean_session=true
+client_id="chirpstack_v4"
+event_topic="chirpstack/application/{{ '{{' }}application_id{{ '}}' }}/device/{{ '{{' }}dev_eui{{ '}}' }}/event/{{ '{{' }}event{{ '}}' }}"
+command_topic="chirpstack/application/{{ '{{' }}application_id{{ '}}' }}/device/{{ '{{' }}dev_eui{{ '}}' }}/command/{{ '{{' }}command{{ '}}' }}"

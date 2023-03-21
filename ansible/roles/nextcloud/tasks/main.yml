@@ -1,0 +1,18 @@
+---
+- name: create nextcloud dir
+  ansible.builtin.file:
+    path: "{{ nextcloud_home_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: re-create nextcloud container
+  docker_container:
+    name: nextcloud
+    image: nextcloud:latest
+    state: started
+    recreate: yes
+    restart_policy: always
+    ports:
+      - "192.168.178.86:8081:80/tcp"
+    volumes:
+      - "{{ nextcloud_home_dir }}:/var/www/html"

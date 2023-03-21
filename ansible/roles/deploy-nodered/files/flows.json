@@ -1,0 +1,5239 @@
+[
+    {
+        "id": "4f5dc5935f0353a8",
+        "type": "tab",
+        "label": "Weinsberg Automation",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "954f159c8ea5d3d1",
+        "type": "tab",
+        "label": "Basti Zimmer",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "03fd04578a9865e3",
+        "type": "tab",
+        "label": "Server Automation",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c6d094c219386009",
+        "type": "tab",
+        "label": "LoRaWAN",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "83413677.e09c5",
+        "type": "tab",
+        "label": "Gellmersbach Werkstatt",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "472d8512887a7d9d",
+        "type": "tab",
+        "label": "Remote Raspi",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "aa2afb0b.50e3",
+        "type": "subflow",
+        "name": "timed trigger switch",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 260,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "6c481ec2.d42ac8"
+                    },
+                    {
+                        "id": "bb9cda34.3be03"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 580,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "6c481ec2.d42ac8",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "7ddc2f1e.d7a67",
+        "type": "ui_group",
+        "name": "Display Gauge",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b14430cd.479ea",
+        "type": "telegram bot",
+        "botname": "FFW - Gellmersbach",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "pollinterval": "300",
+        "verboselogging": false
+    },
+    {
+        "id": "ff13b7e6.6b0f58",
+        "type": "ui_group",
+        "name": "Display Gauge",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "423e5bdd.7078c4",
+        "type": "ui_group",
+        "name": "Steuerung",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "cd9c6b80.17b0e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#f22222",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#f22222",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#f22222",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#f66a6a",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#f22222",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7da05ba4.b9fe74",
+        "type": "ui_group",
+        "name": "ESP-01 Rolltor",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6cde1766.c06c2",
+        "type": "ui_group",
+        "name": "Gartenhaus",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "f2f2e12.558412",
+        "type": "ui_group",
+        "name": "Nutzertabelle",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "28",
+        "collapse": false
+    },
+    {
+        "id": "7de8acfd.9414b4",
+        "type": "ui_group",
+        "name": "Konfiguration",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ffb22b2c.5e47",
+        "type": "ui_group",
+        "name": "Telegram - Passwort Reset",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ba6f8ec1.d78848",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "ee067485.90c11",
+        "type": "mqtt-broker",
+        "name": "TLS MQTT",
+        "broker": "services.acker",
+        "port": "8883",
+        "tls": "f7112396.c67fd",
+        "clientid": "",
+        "usetls": true,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "f7112396.c67fd",
+        "type": "tls-config",
+        "name": "",
+        "cert": "/etc/mosquitto/certs/services.acker.pem",
+        "key": "/etc/mosquitto/certs/services.acker.key",
+        "ca": "/etc/mosquitto/ca_certificates/rootCA.crt",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "dd5a4114.8912a",
+        "type": "websocket-listener",
+        "path": "/ws/ex1",
+        "wholemsg": "false"
+    },
+    {
+        "id": "25115c32.b6bf6c",
+        "type": "websocket-listener",
+        "path": "/ws/ex2",
+        "wholemsg": "false"
+    },
+    {
+        "id": "ad3c3a51.8f7cb8",
+        "type": "websocket-listener",
+        "path": "/ws/ex3",
+        "wholemsg": "false"
+    },
+    {
+        "id": "5f9d9ade.956bb4",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "adeckfs7ph1epoia.myfritz.net",
+        "port": "45240",
+        "tls": "f00cdc36.8e2f68",
+        "clientid": "",
+        "usetls": true,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "f00cdc36.8e2f68",
+        "type": "tls-config",
+        "name": "Acker Weinsberg",
+        "cert": "/home/pi/certs/remote.raspi.pem",
+        "key": "/home/pi/certs/remote.raspi.key",
+        "ca": "/home/pi/certs/root.pem",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true
+    },
+    {
+        "id": "c7f7ac05.01f4c",
+        "type": "ui_tab",
+        "name": "Wieslensdorf",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "35588608.b575e2",
+        "type": "ui_group",
+        "name": "Bewässerung",
+        "tab": "c7f7ac05.01f4c",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e4874bc9.2d8bf",
+        "type": "google-api-config"
+    },
+    {
+        "id": "bec5c087.40ea18",
+        "type": "MySQLdatabase",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "ffw_gellmersbach",
+        "tz": ""
+    },
+    {
+        "id": "bddaeede.78bbf",
+        "type": "MySQLdatabase",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "ffw_gellmersbach",
+        "tz": ""
+    },
+    {
+        "id": "b5434f48.be9398",
+        "type": "ui_group",
+        "name": "Esstisch",
+        "tab": "f5c4b824.3e1e58",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "cbb8e98b.3d6af8",
+        "type": "ui_group",
+        "name": "Wohnzimmer",
+        "tab": "f5c4b824.3e1e58",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "7be1ed4a.06d404",
+        "type": "ui_group",
+        "name": "Büro",
+        "tab": "f5c4b824.3e1e58",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "1d043060.90dea",
+        "type": "ui_group",
+        "name": "Basti's Zimmer",
+        "tab": "7a4abbae.3c2ce4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7a4abbae.3c2ce4",
+        "type": "ui_tab",
+        "name": "Gellmersbach",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "31a0d811.b4f118",
+        "type": "ui_group",
+        "name": "NAS Weinsberg",
+        "tab": "68cd91bb.fdadd",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "324b4183.376fa6",
+        "type": "ui_group",
+        "name": "NAS Gellmersbach",
+        "tab": "68cd91bb.fdadd",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c9306137.fd2e58",
+        "type": "ui_group",
+        "name": "Raspberry",
+        "tab": "68cd91bb.fdadd",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "68cd91bb.fdadd",
+        "type": "ui_tab",
+        "name": "Server Automation",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8322649a.5a2438",
+        "type": "mqtt-broker",
+        "name": "TTN",
+        "broker": "eu1.cloud.thethings.network",
+        "port": "8883",
+        "tls": "6b643dc026b44396",
+        "clientid": "",
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f5c4b824.3e1e58",
+        "type": "ui_tab",
+        "name": "Weinsberg",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "8d90814a.52bc88",
+        "type": "ui_group",
+        "name": "Sensorik Außen",
+        "tab": "f5c4b824.3e1e58",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "59e6a817.0bc108",
+        "type": "mqtt-broker",
+        "name": "RaspMQTT",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "9234f391.7ce6d8",
+        "type": "telegram bot",
+        "botname": "Acker Home Bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "",
+        "socksusername": "",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "",
+        "publicbotport": "",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "7c2fdc47.2803dc",
+        "type": "mqtt-broker",
+        "name": "Thingsboard MQTT",
+        "broker": "192.168.178.86",
+        "port": "1884",
+        "clientid": "localraspi",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6b643dc026b44396",
+        "type": "tls-config",
+        "name": "TTN Zertifikate",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "ba15319204825fdf",
+        "type": "ui_group",
+        "name": "Sensorik Wohnzimmer",
+        "tab": "f5c4b824.3e1e58",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b6cf43765ec064ae",
+        "type": "ui_group",
+        "name": "Lichterkette Schlafzimmer",
+        "tab": "f5c4b824.3e1e58",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6c481ec2.d42ac8",
+        "type": "function",
+        "z": "aa2afb0b.50e3",
+        "name": "",
+        "func": "var test= flow.get('trigger_object');\n\nif(typeof flow.get('trigger_object') !== undefined){\n    flow.set(\"trigger_object\", {\n        1:0,\n        2:0,\n        3:0,\n        4:0,\n        pointer:1\n    });\n}\n\nvar trigger_object = flow.get('trigger_object');\nvar date = new Date().getTime();\n\nvar pointer = trigger_object.pointer;\n\nif(pointer === 4){\n    if(date > (trigger_object[\"1\"] + 1000) ){\n        return msg;\n    }\n}else{\n    trigger_object[pointer] = date;\n    trigger_object.pointer++;\n    \n    flow.set(\"trigger_object\", trigger_object);\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb9cda34.3be03",
+        "type": "debug",
+        "z": "aa2afb0b.50e3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 420,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c965e58e6773a014",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/relay/0",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "b5a5295160d52f18",
+                "9eb582ad551ff4cb",
+                "bd1b18bccd1c0676",
+                "46b7c04e60e3d411"
+            ]
+        ]
+    },
+    {
+        "id": "7fd2a4c6ac9f6bc3",
+        "type": "mqtt out",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/relay/0/command",
+        "qos": "0",
+        "retain": "false",
+        "broker": "59e6a817.0bc108",
+        "x": 1170,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "06216c83f11e663c",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/input/0",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 270,
+        "y": 120,
+        "wires": [
+            [
+                "7357c922c8841eab",
+                "52d5a55b6557bf42",
+                "0fb057842e03f6ed"
+            ]
+        ]
+    },
+    {
+        "id": "88a15ecfacc95fb2",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/input/1",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 250,
+        "y": 520,
+        "wires": [
+            [
+                "675e065617fce39e",
+                "e5c764b9c8cd9ee7",
+                "bb7bc0e75feaeeb6"
+            ]
+        ]
+    },
+    {
+        "id": "74c814c6a0c633d0",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/relay/1",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 250,
+        "y": 560,
+        "wires": [
+            [
+                "b0afe5126edc6b9c",
+                "0923a8d0b3556ca8",
+                "0e947b495188991e",
+                "112bb7bacd03b197"
+            ]
+        ]
+    },
+    {
+        "id": "b5a5295160d52f18",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "675e065617fce39e",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b0afe5126edc6b9c",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "98f9a43e6fcb372c",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/temperature",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 270,
+        "y": 720,
+        "wires": [
+            [
+                "e429ec0f00915f45",
+                "1c4cc35e57d8fe3d"
+            ]
+        ]
+    },
+    {
+        "id": "e429ec0f00915f45",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "cd9b0f86c2d45560",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/relay/0/power",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "9f3006eddf56cb8f",
+                "a9281e81a075f7bd",
+                "8fc598665c9b96d2"
+            ]
+        ]
+    },
+    {
+        "id": "9f3006eddf56cb8f",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f86d6ab7cbda68ae",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/relay/1/power",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 270,
+        "y": 600,
+        "wires": [
+            [
+                "9c77aceaf9987333",
+                "6515c44f9afb8f46",
+                "33a49b18fab4d936"
+            ]
+        ]
+    },
+    {
+        "id": "9c77aceaf9987333",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "ae70e70ef015b632",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/relay/0/energy",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "adad5056e2f99609",
+                "0a0e9a55ec23c3a7"
+            ]
+        ]
+    },
+    {
+        "id": "adad5056e2f99609",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "347f6c2af1475726",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/relay/1/energy",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 270,
+        "y": 640,
+        "wires": [
+            [
+                "9dd069abd4571922",
+                "405a4dac53a62f4c"
+            ]
+        ]
+    },
+    {
+        "id": "9dd069abd4571922",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9eb582ad551ff4cb",
+        "type": "ui_switch",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "label": "Licht",
+        "tooltip": "",
+        "group": "b5434f48.be9398",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "7fd2a4c6ac9f6bc3"
+            ]
+        ]
+    },
+    {
+        "id": "7357c922c8841eab",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "Status Changer",
+        "func": "msg.color = (msg.payload === \"0\")?\"red\":\"lime\";\nmsg.text = (msg.payload === \"0\")?\"Status   \":\"Status   \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 860,
+        "y": 400,
+        "wires": [
+            [
+                "e47969baa0df5f61"
+            ]
+        ]
+    },
+    {
+        "id": "e47969baa0df5f61",
+        "type": "ui_text",
+        "z": "4f5dc5935f0353a8",
+        "group": "b5434f48.be9398",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Schalter Esstisch",
+        "format": "{{msg.text}}<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>",
+        "layout": "col-center",
+        "x": 1070,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a9281e81a075f7bd",
+        "type": "ui_gauge",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "group": "b5434f48.be9398",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Leistungsaufnahme Esstisch",
+        "label": "Watt",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 900,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "58c7371101ab3962",
+        "type": "mqtt out",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/relay/1/command",
+        "qos": "0",
+        "retain": "false",
+        "broker": "59e6a817.0bc108",
+        "x": 1170,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "0923a8d0b3556ca8",
+        "type": "ui_switch",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "label": "Licht",
+        "tooltip": "",
+        "group": "cbb8e98b.3d6af8",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 830,
+        "y": 760,
+        "wires": [
+            [
+                "58c7371101ab3962"
+            ]
+        ]
+    },
+    {
+        "id": "e5c764b9c8cd9ee7",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "Status Changer",
+        "func": "msg.color = (msg.payload === \"0\")?\"red\":\"lime\";\nmsg.text = (msg.payload === \"0\")?\"Status   \":\"Status   \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 860,
+        "y": 820,
+        "wires": [
+            [
+                "a13f4f59e380ca3c"
+            ]
+        ]
+    },
+    {
+        "id": "a13f4f59e380ca3c",
+        "type": "ui_text",
+        "z": "4f5dc5935f0353a8",
+        "group": "cbb8e98b.3d6af8",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Schalter Couch",
+        "format": "{{msg.text}}<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>",
+        "layout": "col-center",
+        "x": 1060,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "6515c44f9afb8f46",
+        "type": "ui_gauge",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "group": "cbb8e98b.3d6af8",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Leistungsaufnahme Couch",
+        "label": "Watt",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 900,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "544f8ef36a2cee43",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shelly1-BA5B19/relay/0",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 230,
+        "y": 980,
+        "wires": [
+            [
+                "b7e1131f799e8c55",
+                "5b95b9a186058827",
+                "54543a0266286b36",
+                "f640301d127e9c69"
+            ]
+        ]
+    },
+    {
+        "id": "7e8c49dfc1214629",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "b7e1131f799e8c55",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "40bce80e04b5b525",
+        "type": "mqtt out",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shelly1-BA5B19/relay/0/command",
+        "qos": "0",
+        "retain": "false",
+        "broker": "59e6a817.0bc108",
+        "x": 1140,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "5b95b9a186058827",
+        "type": "ui_switch",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "label": "Deckenlicht",
+        "group": "7be1ed4a.06d404",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 850,
+        "y": 1020,
+        "wires": [
+            [
+                "40bce80e04b5b525"
+            ]
+        ]
+    },
+    {
+        "id": "b084f3e6535669c9",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shelly1-BA5B19/input/0",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 230,
+        "y": 940,
+        "wires": [
+            [
+                "7e8c49dfc1214629",
+                "7815d6501842e201",
+                "7a3ff89f659fe1e8"
+            ]
+        ]
+    },
+    {
+        "id": "7815d6501842e201",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "Status Changer",
+        "func": "msg.color = (msg.payload === \"0\")?\"red\":\"lime\";\nmsg.text = (msg.payload === \"0\")?\"Status   \":\"Status   \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 860,
+        "y": 1080,
+        "wires": [
+            [
+                "9c0c8eaa3c89d74f"
+            ]
+        ]
+    },
+    {
+        "id": "9c0c8eaa3c89d74f",
+        "type": "ui_text",
+        "z": "4f5dc5935f0353a8",
+        "group": "7be1ed4a.06d404",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Schalter Deckenlicht",
+        "format": "{{msg.text}}<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>",
+        "layout": "col-center",
+        "x": 1080,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "97dcda353e8f0f55",
+        "type": "http in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "url": "/longpress",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1160,
+        "wires": [
+            [
+                "d2c379a2837f6443"
+            ]
+        ]
+    },
+    {
+        "id": "d2c379a2837f6443",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 410,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "52d5a55b6557bf42",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer input",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Wohnzimmer-Esstisch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"switch\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 120,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "ef64987ee190a617",
+        "type": "mqtt out",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "v1/gateway/telemetry",
+        "qos": "1",
+        "retain": "false",
+        "broker": "7c2fdc47.2803dc",
+        "x": 1900,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "bd1b18bccd1c0676",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer relay",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Wohnzimmer-Esstisch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"relay\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 160,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "8fc598665c9b96d2",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer power",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Wohnzimmer-Esstisch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"power\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1120,
+        "y": 200,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "0a0e9a55ec23c3a7",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer energy",
+        "func": "var last_energy = global.get(\"esstisch-energie\");\nif(last_energy < msg.payload){\n    var consumedEnergy = msg.payload - last_energy;\n    var obj = {\n    \"Weinsberg-Licht-Wohnzimmer-Esstisch\": [\n        {\n            \"ts\": Math.floor(Date.now()),\n            \"values\": {\n                \"energy\": consumedEnergy,\n                \"usecase\": \"shelly-switch\"\n            }\n        }\n    ]\n    };\n    msg.payload = obj;\n    global.set(\"esstisch-energie\", msg.payload);\n    return msg;\n}\nglobal.set(\"esstisch-energie\", msg.payload);\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1120,
+        "y": 240,
+        "wires": [
+            [
+                "ef64987ee190a617",
+                "15be24d40d5f081f"
+            ]
+        ]
+    },
+    {
+        "id": "bb7bc0e75feaeeb6",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer input",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Wohnzimmer-Couch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"switch\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 520,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "0e947b495188991e",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer relay",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Wohnzimmer-Couch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"relay\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 560,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "33a49b18fab4d936",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer power",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Wohnzimmer-Couch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"power\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1120,
+        "y": 600,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "405a4dac53a62f4c",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer energy",
+        "func": "var last_energy = global.get(\"couch-energie\");\nif(last_energy < msg.payload){\n    var consumedEnergy = msg.payload - last_energy;\n    var obj = {\n    \"Weinsberg-Licht-Wohnzimmer-Couch\": [\n        {\n            \"ts\": Math.floor(Date.now()),\n            \"values\": {\n                \"energy\": consumedEnergy,\n                \"usecase\": \"shelly-switch\"\n            }\n        }\n    ]\n    };\n    msg.payload = obj;\n    global.set(\"couch-energie\", msg.payload);\n    return msg;\n}\nglobal.set(\"couch-energie\", msg.payload);\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1120,
+        "y": 640,
+        "wires": [
+            [
+                "ef64987ee190a617",
+                "fae4ba5fcad35c0a"
+            ]
+        ]
+    },
+    {
+        "id": "7a3ff89f659fe1e8",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer input",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Arbeitszimmer\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"switch\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 940,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "54543a0266286b36",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer relay",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Arbeitszimmer\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"relay\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 980,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "46b7c04e60e3d411",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer attributes",
+        "func": "var obj = {\n    \"Weinsberg-Licht-Wohnzimmer-Esstisch\":{\n        \"relay-topic\":msg.topic\n    }\n};\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1650,
+        "y": 200,
+        "wires": [
+            [
+                "24ed26a5a64b4cbc"
+            ]
+        ]
+    },
+    {
+        "id": "112bb7bacd03b197",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer attributes",
+        "func": "var obj = {\n    \"Weinsberg-Licht-Wohnzimmer-Couch\":{\n        \"relay-topic\":msg.topic\n    }\n};\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1650,
+        "y": 420,
+        "wires": [
+            [
+                "24ed26a5a64b4cbc"
+            ]
+        ]
+    },
+    {
+        "id": "f640301d127e9c69",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer attributes",
+        "func": "var obj = {\n    \"Weinsberg-Licht-Arbeitszimmer\":{\n        \"relay-topic\":msg.topic\n    }\n};\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1610,
+        "y": 940,
+        "wires": [
+            [
+                "24ed26a5a64b4cbc"
+            ]
+        ]
+    },
+    {
+        "id": "24ed26a5a64b4cbc",
+        "type": "mqtt out",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "v1/gateway/attributes",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7c2fdc47.2803dc",
+        "x": 1880,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "15be24d40d5f081f",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1610,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fae4ba5fcad35c0a",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1450,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "1c4cc35e57d8fe3d",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer temperature",
+        "func": "var obj = {\n  \"Weinsberg-Licht-Shelly-Wohnzimmer\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"temperature\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1088.63330078125,
+        "y": 716,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "dd2310601fde159a",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A634D/relay/0",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 220,
+        "y": 1880,
+        "wires": [
+            [
+                "460a59f4ed2652cc",
+                "927373a88c4bcf4b"
+            ]
+        ]
+    },
+    {
+        "id": "9cb0ab5043d0b399",
+        "type": "mqtt out",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A634D/relay/0/command",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "59e6a817.0bc108",
+        "x": 1240,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "c6b17b3eca506654",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "interval switch",
+        "func": "var interval = 800;\nvar pushes = 4;\n\nvar obj = {\n        triggers:[],\n        pointer:0\n}\n\n//create object in context of node initially\nif(typeof context.get('trigger_object') === \"undefined\"){\n    context.set(\"trigger_object\", obj);\n}\n\n\n\nvar trigger_object = context.get('trigger_object');\nvar date = new Date().getTime();\nvar pointer = trigger_object.pointer;\n\nif(msg.payload === \"reset\"){\n    reset();\n}else{\n\n    if(pointer === pushes-1){\n    \n        if(date < (trigger_object.triggers[0] + interval)){\n            node.send(msg);\n        }\n        context.set(\"trigger_object\", obj);\n        return null;\n    }else{\n        trigger_object.triggers[pointer] = date;\n        pointer = pointer + 1;\n        trigger_object.pointer = pointer;\n        \n        context.set(\"trigger_object\", trigger_object);\n    }\n}\n\nfunction reset(){\n    for(var i=0; i<trigger_object.triggers.length; i++){\n        if(date > trigger_object.triggers[i] + interval){\n            context.set(\"trigger_object\", obj);\n        }\n    }\n    return \"reset\";\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 720,
+        "y": 1820,
+        "wires": [
+            [
+                "bb4ee14611536657"
+            ]
+        ]
+    },
+    {
+        "id": "ade8727e337004f7",
+        "type": "inject",
+        "z": "4f5dc5935f0353a8",
+        "name": "Reset interval",
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "reset",
+        "payloadType": "str",
+        "x": 560,
+        "y": 1760,
+        "wires": [
+            [
+                "c6b17b3eca506654"
+            ]
+        ]
+    },
+    {
+        "id": "99831dc730dfdf22",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyswitch25-B8A237/input/1",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 230,
+        "y": 1820,
+        "wires": [
+            [
+                "c6b17b3eca506654"
+            ]
+        ]
+    },
+    {
+        "id": "bb4ee14611536657",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "toggle signal",
+        "func": "msg.payload = \"toggle\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 910,
+        "y": 1820,
+        "wires": [
+            [
+                "9cb0ab5043d0b399"
+            ]
+        ]
+    },
+    {
+        "id": "1752badf97df1b00",
+        "type": "comment",
+        "z": "4f5dc5935f0353a8",
+        "name": "Switch Media Shelly ",
+        "info": "",
+        "x": 170,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "460a59f4ed2652cc",
+        "type": "ui_switch",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "label": "Media",
+        "tooltip": "",
+        "group": "cbb8e98b.3d6af8",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 690,
+        "y": 1880,
+        "wires": [
+            [
+                "9cb0ab5043d0b399"
+            ]
+        ]
+    },
+    {
+        "id": "b64c5343f590ea7f",
+        "type": "ui_gauge",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "group": "cbb8e98b.3d6af8",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Leistungsaufnahme Media",
+        "label": "Watt",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 760,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "e401b24960f09783",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A634D/relay/0/power",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 240,
+        "y": 1940,
+        "wires": [
+            [
+                "b64c5343f590ea7f",
+                "3b53df1adad70a2d"
+            ]
+        ]
+    },
+    {
+        "id": "71db0300776a6418",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer relay",
+        "func": "var obj = {\n  \"Weinsberg-Media-Wohnzimmer-Couch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"relay\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1150,
+        "y": 1880,
+        "wires": [
+            [
+                "a88600db51598122"
+            ]
+        ]
+    },
+    {
+        "id": "3b53df1adad70a2d",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer power",
+        "func": "var obj = {\n  \"Weinsberg-Media-Wohnzimmer-Couch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"power\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1160,
+        "y": 1940,
+        "wires": [
+            [
+                "a88600db51598122"
+            ]
+        ]
+    },
+    {
+        "id": "394ac3dd8e435ebf",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer energy",
+        "func": "var last_energy = global.get(\"media-energie\");\nif(last_energy < msg.payload){\n    var consumedEnergy = msg.payload - last_energy;\n    var obj = {\n    \"Weinsberg-Media-Wohnzimmer-Couch\": [\n        {\n            \"ts\": Math.floor(Date.now()),\n            \"values\": {\n                \"energy\": consumedEnergy,\n                \"usecase\": \"shelly-switch\"\n            }\n        }\n    ]\n    };\n    msg.payload = obj;\n    global.set(\"media-energie\", msg.payload);\n    return msg;\n}\nglobal.set(\"media-energie\", msg.payload);\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1160,
+        "y": 2000,
+        "wires": [
+            [
+                "a88600db51598122"
+            ]
+        ]
+    },
+    {
+        "id": "2799bfae14498c8d",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer temperature",
+        "func": "var obj = {\n  \"Weinsberg-Media-Wohnzimmer-Couch\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"temperature\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1180,
+        "y": 2060,
+        "wires": [
+            [
+                "a88600db51598122"
+            ]
+        ]
+    },
+    {
+        "id": "174aa3d6cbbec7ba",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A634D/relay/0/energy",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 250,
+        "y": 2000,
+        "wires": [
+            [
+                "394ac3dd8e435ebf"
+            ]
+        ]
+    },
+    {
+        "id": "b7ce08b31cc19027",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A634D/temperature",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 240,
+        "y": 2060,
+        "wires": [
+            [
+                "2799bfae14498c8d"
+            ]
+        ]
+    },
+    {
+        "id": "a88600db51598122",
+        "type": "link out",
+        "z": "4f5dc5935f0353a8",
+        "name": "telemetry",
+        "links": [
+            "ad76d9c7f0c0a156"
+        ],
+        "x": 1415,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "ad76d9c7f0c0a156",
+        "type": "link in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "links": [
+            "a88600db51598122",
+            "1134c1ca7bb2b681",
+            "0c2ff7465ede3d1d",
+            "f45ddff4.ef76d8"
+        ],
+        "x": 1680,
+        "y": 700,
+        "wires": [
+            [
+                "ef64987ee190a617"
+            ]
+        ]
+    },
+    {
+        "id": "927373a88c4bcf4b",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer attributes",
+        "func": "var obj = {\n    \"Weinsberg-Media-Wohnzimmer-Couch\":{\n        \"relay-topic\":msg.topic\n    }\n};\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 2120,
+        "wires": [
+            [
+                "1134c1ca7bb2b681"
+            ]
+        ]
+    },
+    {
+        "id": "1134c1ca7bb2b681",
+        "type": "link out",
+        "z": "4f5dc5935f0353a8",
+        "name": "attributes",
+        "links": [
+            "ad76d9c7f0c0a156",
+            "5c0279bae6ab455a"
+        ],
+        "x": 1415,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "5c0279bae6ab455a",
+        "type": "link in",
+        "z": "4f5dc5935f0353a8",
+        "name": "attributes",
+        "links": [
+            "1134c1ca7bb2b681",
+            "f45ddff4.ef76d8"
+        ],
+        "x": 1695,
+        "y": 480,
+        "wires": [
+            [
+                "24ed26a5a64b4cbc"
+            ]
+        ]
+    },
+    {
+        "id": "b035675dfdb394ed",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A67B9/relay/0/power",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 240,
+        "y": 2320,
+        "wires": [
+            [
+                "5d27146e9391e2c0"
+            ]
+        ]
+    },
+    {
+        "id": "0ac25a72ad45ec60",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A67B9/relay/0/energy",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 250,
+        "y": 2380,
+        "wires": [
+            [
+                "08cd3e6adfdf8794"
+            ]
+        ]
+    },
+    {
+        "id": "2fb1dcfa18462e88",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A67B9/temperature",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 240,
+        "y": 2440,
+        "wires": [
+            [
+                "1703aed6ad551976"
+            ]
+        ]
+    },
+    {
+        "id": "1703aed6ad551976",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer temperature",
+        "func": "var obj = {\n  \"Weinsberg-IT-Arbeitszimmer\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"temperature\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1180,
+        "y": 2440,
+        "wires": [
+            [
+                "0c2ff7465ede3d1d"
+            ]
+        ]
+    },
+    {
+        "id": "08cd3e6adfdf8794",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer energy",
+        "func": "var last_energy = global.get(\"it-energie\");\nif(last_energy < msg.payload){\n    var consumedEnergy = msg.payload - last_energy;\n    var obj = {\n    \"Weinsberg-IT-Arbeitszimmer\": [\n        {\n            \"ts\": Math.floor(Date.now()),\n            \"values\": {\n                \"energy\": consumedEnergy,\n                \"usecase\": \"shelly-switch\"\n            }\n        }\n    ]\n    };\n    msg.payload = obj;\n    global.set(\"it-energie\", msg.payload);\n    return msg;\n}\nglobal.set(\"it-energie\", msg.payload);\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1160,
+        "y": 2380,
+        "wires": [
+            [
+                "0c2ff7465ede3d1d"
+            ]
+        ]
+    },
+    {
+        "id": "5d27146e9391e2c0",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer power",
+        "func": "var obj = {\n  \"Weinsberg-IT-Arbeitszimmer\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"power\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1160,
+        "y": 2320,
+        "wires": [
+            [
+                "0c2ff7465ede3d1d"
+            ]
+        ]
+    },
+    {
+        "id": "1e3d74218da82b6b",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "transfer relay",
+        "func": "var obj = {\n  \"Weinsberg-IT-Arbeitszimmer\": [\n    {\n      \"ts\": Math.floor(Date.now()),\n      \"values\": {\n        \"relay\": msg.payload,\n        \"usecase\": \"shelly-switch\"\n      }\n    }\n    ]\n};\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1150,
+        "y": 2260,
+        "wires": [
+            [
+                "0c2ff7465ede3d1d"
+            ]
+        ]
+    },
+    {
+        "id": "0c2ff7465ede3d1d",
+        "type": "link out",
+        "z": "4f5dc5935f0353a8",
+        "name": "telemetry",
+        "links": [
+            "ad76d9c7f0c0a156"
+        ],
+        "x": 1415,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "0e21a86c17d2b06a",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A67B9/relay/0",
+        "qos": "0",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 220,
+        "y": 2260,
+        "wires": [
+            [
+                "1e3d74218da82b6b"
+            ]
+        ]
+    },
+    {
+        "id": "0fb057842e03f6ed",
+        "type": "debug",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "db5ed4e805b39a72",
+        "type": "comment",
+        "z": "4f5dc5935f0353a8",
+        "name": "Lichterkette Schlafzimmer",
+        "info": "",
+        "x": 180,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "dc5ebbec035e2633",
+        "type": "mqtt in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A67B9/relay/0",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "59e6a817.0bc108",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 220,
+        "y": 2680,
+        "wires": [
+            [
+                "dba953df1b5d740b"
+            ]
+        ]
+    },
+    {
+        "id": "78c5d562851b27c9",
+        "type": "ui_switch",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "label": "An/Aus",
+        "tooltip": "",
+        "group": "b6cf43765ec064ae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 620,
+        "y": 2680,
+        "wires": [
+            [
+                "55145ac03a593f07"
+            ]
+        ]
+    },
+    {
+        "id": "dba953df1b5d740b",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "Mapping",
+        "func": "if(msg.payload === \"on\"){\n    msg.payload = true\n} else if(msg.payload=== \"off\"){\n    msg.payload = false\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 2680,
+        "wires": [
+            [
+                "78c5d562851b27c9"
+            ]
+        ]
+    },
+    {
+        "id": "89ffd1f1f52ba689",
+        "type": "mqtt out",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "topic": "shellies/shellyplug-s-6A67B9/relay/0/command",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "59e6a817.0bc108",
+        "x": 1060,
+        "y": 2680,
+        "wires": []
+    },
+    {
+        "id": "55145ac03a593f07",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "Mapping",
+        "func": "if(msg.payload === true){\n    msg.payload = \"on\"\n} else if(msg.payload === false){\n    msg.payload = \"off\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 2680,
+        "wires": [
+            [
+                "89ffd1f1f52ba689"
+            ]
+        ]
+    },
+    {
+        "id": "5786d877ab89de09",
+        "type": "comment",
+        "z": "4f5dc5935f0353a8",
+        "name": "Toggle An/Aus",
+        "info": "",
+        "x": 150,
+        "y": 2640,
+        "wires": []
+    },
+    {
+        "id": "be80979417835eda",
+        "type": "comment",
+        "z": "4f5dc5935f0353a8",
+        "name": "Timer",
+        "info": "",
+        "x": 130,
+        "y": 2760,
+        "wires": []
+    },
+    {
+        "id": "a6b84aefdb2ca97e",
+        "type": "ui_button",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "group": "b6cf43765ec064ae",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Timer 30 min",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#555555",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "30",
+        "x": 170,
+        "y": 2840,
+        "wires": [
+            [
+                "4d1cb354991c9dc4"
+            ]
+        ]
+    },
+    {
+        "id": "115ac3ea229f3a99",
+        "type": "ui_button",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "group": "b6cf43765ec064ae",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Timer 60 min",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#555555",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "60",
+        "x": 170,
+        "y": 2880,
+        "wires": [
+            [
+                "4d1cb354991c9dc4"
+            ]
+        ]
+    },
+    {
+        "id": "14f27eab2aa0ce35",
+        "type": "ui_button",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "group": "b6cf43765ec064ae",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Timer 120 min",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#555555",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "120",
+        "x": 180,
+        "y": 2920,
+        "wires": [
+            [
+                "4d1cb354991c9dc4"
+            ]
+        ]
+    },
+    {
+        "id": "d58a491f29315a9a",
+        "type": "delay",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 2860,
+        "wires": [
+            [
+                "41aca2e8cdcf8948"
+            ]
+        ]
+    },
+    {
+        "id": "4d1cb354991c9dc4",
+        "type": "link out",
+        "z": "4f5dc5935f0353a8",
+        "name": "timer connector",
+        "links": [
+            "b0fb7eb9084503d8",
+            "7f17d8779d9a4217"
+        ],
+        "x": 295,
+        "y": 2860,
+        "wires": []
+    },
+    {
+        "id": "b0fb7eb9084503d8",
+        "type": "link in",
+        "z": "4f5dc5935f0353a8",
+        "name": "timer connector",
+        "links": [
+            "4d1cb354991c9dc4"
+        ],
+        "x": 815,
+        "y": 2740,
+        "wires": [
+            [
+                "89ffd1f1f52ba689"
+            ]
+        ]
+    },
+    {
+        "id": "ca287dfa41166399",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "Delay",
+        "func": "let newMsg = {\n    reset: \"only one\"\n}\nnode.send([newMsg])\n\nmsg.delay = parseInt(msg.topic) *1000*60;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 2860,
+        "wires": [
+            [
+                "d58a491f29315a9a"
+            ]
+        ]
+    },
+    {
+        "id": "7f17d8779d9a4217",
+        "type": "link in",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "links": [
+            "4d1cb354991c9dc4"
+        ],
+        "x": 395,
+        "y": 2860,
+        "wires": [
+            [
+                "ca287dfa41166399"
+            ]
+        ]
+    },
+    {
+        "id": "41aca2e8cdcf8948",
+        "type": "function",
+        "z": "4f5dc5935f0353a8",
+        "name": "Send Off",
+        "func": "msg.payload = \"off\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 2860,
+        "wires": [
+            [
+                "89ffd1f1f52ba689"
+            ]
+        ]
+    },
+    {
+        "id": "4d7b366ce4361434",
+        "type": "ui_button",
+        "z": "4f5dc5935f0353a8",
+        "name": "",
+        "group": "b6cf43765ec064ae",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Timer 15 min",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#555555",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "15",
+        "x": 170,
+        "y": 2800,
+        "wires": [
+            [
+                "4d1cb354991c9dc4"
+            ]
+        ]
+    },
+    {
+        "id": "97d5cd7bd8ff7bfa",
+        "type": "mqtt out",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "topic": "cmnd/haus/basti_zimmer/deckenlampe/power",
+        "qos": "",
+        "retain": "",
+        "broker": "59e6a817.0bc108",
+        "x": 1060,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "06728d7530b72f2a",
+        "type": "inject",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 750,
+        "y": 240,
+        "wires": [
+            [
+                "97d5cd7bd8ff7bfa"
+            ]
+        ]
+    },
+    {
+        "id": "6d8f13ae78a1201b",
+        "type": "inject",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 750,
+        "y": 280,
+        "wires": [
+            [
+                "97d5cd7bd8ff7bfa"
+            ]
+        ]
+    },
+    {
+        "id": "f9238baf26e0bf9b",
+        "type": "mqtt in",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "topic": "stat/haus/basti_zimmer/deckenlampe/POWER",
+        "qos": "2",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "24d6ada9dcb297c6",
+                "9526ccdbba906c34"
+            ]
+        ]
+    },
+    {
+        "id": "24d6ada9dcb297c6",
+        "type": "debug",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 630,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "085a29d6316b778c",
+        "type": "ui_switch",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "label": "Deckenlampe",
+        "group": "1d043060.90dea",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 780,
+        "y": 360,
+        "wires": [
+            [
+                "97d5cd7bd8ff7bfa"
+            ]
+        ]
+    },
+    {
+        "id": "9526ccdbba906c34",
+        "type": "change",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ON",
+                "fromt": "str",
+                "to": "on",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "OFF",
+                "fromt": "str",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 360,
+        "wires": [
+            [
+                "085a29d6316b778c"
+            ]
+        ]
+    },
+    {
+        "id": "33953949ef27a2b2",
+        "type": "ping",
+        "z": "954f159c8ea5d3d1",
+        "name": "Schalter Ping",
+        "host": "192.168.168.95",
+        "timer": "60",
+        "inputs": 0,
+        "x": 390,
+        "y": 560,
+        "wires": [
+            [
+                "f06658803514a28a",
+                "cc527f02f2f1359d"
+            ]
+        ]
+    },
+    {
+        "id": "f06658803514a28a",
+        "type": "function",
+        "z": "954f159c8ea5d3d1",
+        "name": "Status Changer",
+        "func": "msg.color = (msg.payload === false)?\"red\":\"lime\";\nmsg.text = (msg.payload === false)?\"Keine Verbindung  \":\"Verbindung hergestellt  \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 640,
+        "y": 560,
+        "wires": [
+            [
+                "2115d7c76ea49d7a"
+            ]
+        ]
+    },
+    {
+        "id": "2115d7c76ea49d7a",
+        "type": "ui_text",
+        "z": "954f159c8ea5d3d1",
+        "group": "1d043060.90dea",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Schalter Status",
+        "format": "{{msg.text}}<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>",
+        "layout": "col-center",
+        "x": 860,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cc527f02f2f1359d",
+        "type": "function",
+        "z": "954f159c8ea5d3d1",
+        "name": "Ping Function Translator 1",
+        "func": "if(msg.payload === false){\n    return { payload:\"-\"};\n}else{\n    return { payload: msg.payload + \"ms\"};\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 640,
+        "wires": [
+            [
+                "b32b44139a14fc5d"
+            ]
+        ]
+    },
+    {
+        "id": "b32b44139a14fc5d",
+        "type": "ui_text",
+        "z": "954f159c8ea5d3d1",
+        "group": "1d043060.90dea",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Schalter Ping",
+        "label": "Ping",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "523bd226f9475bcd",
+        "type": "ping",
+        "z": "954f159c8ea5d3d1",
+        "name": "OnePlus 3T Ping",
+        "host": "192.168.168.21",
+        "timer": "600",
+        "inputs": 0,
+        "x": 480,
+        "y": 120,
+        "wires": [
+            [
+                "81aba8ef49e6afd1",
+                "ce1465d32a73e114"
+            ]
+        ]
+    },
+    {
+        "id": "81aba8ef49e6afd1",
+        "type": "function",
+        "z": "954f159c8ea5d3d1",
+        "name": "auto light off",
+        "func": "if(flow.get('count') === undefined){\n    flow.set('count', 0);\n}\n\nif(msg.payload === false){\n    flow.set('count', (flow.get('count') + 1));\n    if(flow.get('count') == 3){\n        msg.payload = \"off\";\n        return msg;\n    }\n}else{\n    flow.set('count', 0);\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 120,
+        "wires": [
+            [
+                "97d5cd7bd8ff7bfa",
+                "63f474874382a10a"
+            ]
+        ]
+    },
+    {
+        "id": "63f474874382a10a",
+        "type": "debug",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 940,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ce1465d32a73e114",
+        "type": "debug",
+        "z": "954f159c8ea5d3d1",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 720,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0c771611c0471546",
+        "type": "exec",
+        "z": "03fd04578a9865e3",
+        "command": "sudo etherwake -i eth0 D0:50:99:5F:ED:DC",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a1c98e40e12c1dae",
+        "type": "ui_button",
+        "z": "03fd04578a9865e3",
+        "name": "",
+        "group": "31a0d811.b4f118",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "Einschalten",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "0c771611c0471546"
+            ]
+        ]
+    },
+    {
+        "id": "bad22b824d491f49",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Status Changer",
+        "func": "msg.color = (msg.payload === false)?\"red\":\"lime\";\nmsg.text = (msg.payload === false)?\"Keine Verbindung  \":\"Verbindung hergestellt  \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "f6db47eade206ab7"
+            ]
+        ]
+    },
+    {
+        "id": "f6db47eade206ab7",
+        "type": "ui_text",
+        "z": "03fd04578a9865e3",
+        "group": "31a0d811.b4f118",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Server Status",
+        "format": "{{msg.text}}<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>",
+        "layout": "col-center",
+        "x": 640,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6cc12f04e1d26955",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Ping Function Translator 1",
+        "func": "if(msg.payload === false){\n    return { payload:\"-\"};\n}else{\n    return { payload: msg.payload + \"ms\"};\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 280,
+        "wires": [
+            [
+                "d0aff668169f4568"
+            ]
+        ]
+    },
+    {
+        "id": "d0aff668169f4568",
+        "type": "ui_text",
+        "z": "03fd04578a9865e3",
+        "group": "31a0d811.b4f118",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Server Ping",
+        "label": "Ping",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 690,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1e7d6325493896d3",
+        "type": "comment",
+        "z": "03fd04578a9865e3",
+        "name": "Server Weinsberg",
+        "info": "",
+        "x": 190,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bce0d3ba58b22fbe",
+        "type": "exec",
+        "z": "03fd04578a9865e3",
+        "command": "sudo etherwake -i eth0 64:51:06:4A:50:8E",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 540,
+        "y": 420,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c5f7cb2d84c98c25",
+        "type": "ui_button",
+        "z": "03fd04578a9865e3",
+        "name": "",
+        "group": "324b4183.376fa6",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "Einschalten",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "bce0d3ba58b22fbe"
+            ]
+        ]
+    },
+    {
+        "id": "99a5b85a7cca71b2",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Status Changer",
+        "func": "msg.color = (msg.payload === false)?\"red\":\"lime\";\nmsg.text = (msg.payload === false)?\"Keine Verbindung  \":\"Verbindung hergestellt  \";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 500,
+        "wires": [
+            [
+                "fc92b34b2eba4292"
+            ]
+        ]
+    },
+    {
+        "id": "fc92b34b2eba4292",
+        "type": "ui_text",
+        "z": "03fd04578a9865e3",
+        "group": "324b4183.376fa6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Server Status",
+        "format": "{{msg.text}}<font color={{msg.color}} ><i class=\"fa fa-circle\" style=\"font-size:24px;\"></i></font>",
+        "layout": "col-center",
+        "x": 640,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7c1e85ec3d06572d",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Ping Function Translator 1",
+        "func": "if(msg.payload === false){\n    return { payload:\"-\"};\n}else{\n    return { payload: msg.payload + \"ms\"};\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 580,
+        "wires": [
+            [
+                "3960f5418943409b"
+            ]
+        ]
+    },
+    {
+        "id": "3960f5418943409b",
+        "type": "ui_text",
+        "z": "03fd04578a9865e3",
+        "group": "324b4183.376fa6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Server Ping",
+        "label": "Ping",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 690,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "99729d6d9284ee4a",
+        "type": "comment",
+        "z": "03fd04578a9865e3",
+        "name": "Server Gellmersbach",
+        "info": "",
+        "x": 200,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "59df899617c0311b",
+        "type": "ui_text",
+        "z": "03fd04578a9865e3",
+        "group": "c9306137.fd2e58",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "GPU Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "762a7b9365e89dec",
+        "type": "exec",
+        "z": "03fd04578a9865e3",
+        "command": "vcgencmd measure_temp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Read Raspi GPU Temp",
+        "x": 460,
+        "y": 720,
+        "wires": [
+            [
+                "44a185de29a99783"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e5a06aace51cdb16",
+        "type": "inject",
+        "z": "03fd04578a9865e3",
+        "name": "Trigger Event",
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 160,
+        "y": 720,
+        "wires": [
+            [
+                "762a7b9365e89dec",
+                "cb9afe52eaa63e7d",
+                "d996a19ce5a2fc39",
+                "9478c9f707d0ae19",
+                "cff5832c0440ff51"
+            ]
+        ]
+    },
+    {
+        "id": "44a185de29a99783",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Convert String",
+        "func": "msg.payload = msg.payload.substring(5,9) + \"°C\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 720,
+        "wires": [
+            [
+                "59df899617c0311b"
+            ]
+        ]
+    },
+    {
+        "id": "cb9afe52eaa63e7d",
+        "type": "exec",
+        "z": "03fd04578a9865e3",
+        "command": "cat /sys/class/thermal/thermal_zone0/temp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Read Raspi CPU Temp",
+        "x": 470,
+        "y": 800,
+        "wires": [
+            [
+                "1f94b5332ca1f28c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1f94b5332ca1f28c",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Convert String",
+        "func": "msg.payload = msg.payload.substring(0,3)/10 + \"°C\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 800,
+        "wires": [
+            [
+                "f5a2041d1ed70cad"
+            ]
+        ]
+    },
+    {
+        "id": "f5a2041d1ed70cad",
+        "type": "ui_text",
+        "z": "03fd04578a9865e3",
+        "group": "c9306137.fd2e58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "CPU Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "d996a19ce5a2fc39",
+        "type": "exec",
+        "z": "03fd04578a9865e3",
+        "command": "df | egrep /dev/root | tr -s ' ' | cut -d ' ' -f 3",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Get Used Space of SD Card",
+        "x": 480,
+        "y": 880,
+        "wires": [
+            [
+                "642d1f2ee55f546c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "642d1f2ee55f546c",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Convert String",
+        "func": "msg.payload = msg.payload.substring(0,4);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 880,
+        "wires": [
+            [
+                "3015f2118d2a0188"
+            ]
+        ]
+    },
+    {
+        "id": "3015f2118d2a0188",
+        "type": "ui_gauge",
+        "z": "03fd04578a9865e3",
+        "name": "",
+        "group": "c9306137.fd2e58",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Used Disk Space",
+        "label": "MiB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "7657",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 960,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "d66200236554c137",
+        "type": "ui_gauge",
+        "z": "03fd04578a9865e3",
+        "name": "",
+        "group": "c9306137.fd2e58",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Used RAM",
+        "label": "MiB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "445",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 950,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "9478c9f707d0ae19",
+        "type": "exec",
+        "z": "03fd04578a9865e3",
+        "command": "free | egrep Mem: | tr -s ' ' | cut -d ' ' -f 3",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Get used RAM",
+        "x": 440,
+        "y": 960,
+        "wires": [
+            [
+                "766d0ce30df05f55"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "766d0ce30df05f55",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Convert String",
+        "func": "msg.payload = msg.payload.substring(0,3);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 960,
+        "wires": [
+            [
+                "d66200236554c137"
+            ]
+        ]
+    },
+    {
+        "id": "a7e2e08e5b472e31",
+        "type": "ui_gauge",
+        "z": "03fd04578a9865e3",
+        "name": "",
+        "group": "c9306137.fd2e58",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CPU Usage",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 950,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "6b7a7e318c9ca8c5",
+        "type": "function",
+        "z": "03fd04578a9865e3",
+        "name": "Convert String",
+        "func": "msg.payload = msg.payload.substring(2,4);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 750,
+        "y": 1040,
+        "wires": [
+            [
+                "a7e2e08e5b472e31"
+            ]
+        ]
+    },
+    {
+        "id": "cff5832c0440ff51",
+        "type": "exec",
+        "z": "03fd04578a9865e3",
+        "command": "w | egrep load | tr -s ' ' | cut -d ' ' -f 11",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Get CPU Usage",
+        "x": 440,
+        "y": 1040,
+        "wires": [
+            [
+                "6b7a7e318c9ca8c5"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2c4f390a69712a4e",
+        "type": "comment",
+        "z": "03fd04578a9865e3",
+        "name": "Raspberry Info",
+        "info": "",
+        "x": 160,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "8169e0cb3d7660fb",
+        "type": "debug",
+        "z": "03fd04578a9865e3",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 390,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e955cf05e0b85c14",
+        "type": "mqtt in",
+        "z": "c6d094c219386009",
+        "name": "",
+        "topic": "v3/weinsberg-temperatur@ttn/devices/eui-45405200000010e0/up",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "8322649a.5a2438",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "d0fe8a8c7eefbfeb"
+            ]
+        ]
+    },
+    {
+        "id": "13977cc84a9461d7",
+        "type": "debug",
+        "z": "c6d094c219386009",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 730,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d0fe8a8c7eefbfeb",
+        "type": "json",
+        "z": "c6d094c219386009",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "13977cc84a9461d7",
+                "a9f83725780b102a"
+            ]
+        ]
+    },
+    {
+        "id": "5f573a66a52742a8",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "transfer sensor",
+        "func": "var gateways = msg.payload.metadata.gateways;\nvar best_rssi = -1000;\nvar obj = {};\nvar gateways_send = {gateways: []}\n\nfor(var i=0; i<gateways.length; i++){\n    if(gateways[i].rssi > best_rssi){\n        best_rssi = gateways[i].rssi;\n    }\n    gateways_send.gateways.push(gateways[i].gtw_id);\n}\n\nvar altitude = msg.payload.payload_fields.altitude;\nvar hdop = msg.payload.payload_fields.hdop;\nvar latitude = msg.payload.payload_fields.latitude;\nvar longitude = msg.payload.payload_fields.longitude;\nvar rssi = best_rssi;\nvar gateway_amount = gateways.length;\n\n\n\nif(altitude === 0){\n    obj = {\n      [msg.payload.dev_id]: [\n            {\n            \"ts\": new Date(msg.payload.metadata.time).getTime(),\n                \"values\": {\n                    \"rssi\": rssi,\n                    \"gateway_amount\": gateway_amount,\n                    \"gateways\": JSON.stringify(gateways_send)\n                }\n            }\n        ]\n    };\n}else {\n    obj = {\n      [msg.payload.dev_id]: [\n            {\n            \"ts\": new Date(msg.payload.metadata.time).getTime(),\n                \"values\": {\n                    \"altitude\": altitude,\n                    \"hdop\": hdop,\n                    \"latitude\": latitude,\n                    \"longitude\": longitude,\n                    \"rssi\": rssi,\n                    \"gateway_amount\": gateway_amount,\n                    \"gateways\": JSON.stringify(gateways_send)\n                }\n            }\n        ]\n    };\n}\n\n\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1040,
+        "wires": [
+            [
+                "4da5e564da505927",
+                "cbb7288eaaf281e2"
+            ]
+        ]
+    },
+    {
+        "id": "4da5e564da505927",
+        "type": "mqtt out",
+        "z": "c6d094c219386009",
+        "name": "",
+        "topic": "v1/gateway/telemetry",
+        "qos": "1",
+        "retain": "false",
+        "broker": "7c2fdc47.2803dc",
+        "x": 980,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "37bf7e50acdfb5da",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "transfer gateway",
+        "func": "var gateways = msg.payload.metadata.gateways;\nvar obj = {};\n\n\n\n\nfor(var i=0; i<gateways.length; i++){\nvar altitude = gateways[i].altitude;\nvar latitude = gateways[i].latitude;\nvar longitude = gateways[i].longitude;\n    \n    obj = {\n      [gateways[i].gtw_id]: {\n            \"altitude\": altitude,\n            \"latitude\": latitude,\n            \"longitude\": longitude\n        }\n    };\n    msg.payload = obj;\n    node.send(msg);\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 1120,
+        "wires": [
+            [
+                "674596c4354a3063",
+                "2c583786ee4cb1f5"
+            ]
+        ]
+    },
+    {
+        "id": "674596c4354a3063",
+        "type": "mqtt out",
+        "z": "c6d094c219386009",
+        "name": "",
+        "topic": "v1/gateway/attributes",
+        "qos": "1",
+        "retain": "false",
+        "broker": "7c2fdc47.2803dc",
+        "x": 980,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "cbb7288eaaf281e2",
+        "type": "debug",
+        "z": "c6d094c219386009",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 897.11669921875,
+        "y": 983.1166687011719,
+        "wires": []
+    },
+    {
+        "id": "2c583786ee4cb1f5",
+        "type": "debug",
+        "z": "c6d094c219386009",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 890,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "9a7c80d974b2f9a7",
+        "type": "inject",
+        "z": "c6d094c219386009",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"app_id\":\"ttn_mapper_weinsberg\",\"dev_id\":\"ttn_mapper_skynet\",\"hardware_serial\":\"0004A8755C0AB036\",\"port\":1,\"counter\":27,\"payload_raw\":\"AAAAAAAAAAAAAAAAAAAAAAAAAA==\",\"payload_fields\":{\"altitude\":0,\"hdop\":0,\"latitude\":0,\"longitude\":0},\"metadata\":{\"time\":\"2020-05-21T06:49:12.403387558Z\",\"frequency\":868.1,\"modulation\":\"LORA\",\"data_rate\":\"SF7BW125\",\"airtime\":71936000,\"coding_rate\":\"4/5\",\"gateways\":[{\"gtw_id\":\"eui-000080029c09dfc9\",\"timestamp\":4264815484,\"time\":\"2020-05-21T06:49:12.337909Z\",\"channel\":5,\"rssi\":-120,\"snr\":-5,\"rf_chain\":0,\"latitude\":49.15394,\"longitude\":9.27475,\"altitude\":204}]}}",
+        "payloadType": "json",
+        "x": 390,
+        "y": 1040,
+        "wires": [
+            [
+                "5f573a66a52742a8"
+            ]
+        ]
+    },
+    {
+        "id": "a9f83725780b102a",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "Skysens payload conversion TTN",
+        "func": "let frm_payload = msg.payload.uplink_message.frm_payload;\nlet buffer = Buffer.from(frm_payload, 'base64');\nlet bufString = buffer.toString('hex');\n\nif( msg.payload.uplink_message.f_port === 4 ){\n    var internalTemperature = twoComplementTwoByte(bufString.substring(0, 4)) * 0.1;\n    //var externalTemperature = twoComplementTwoByte(bufString.substring(8, 12)) * 0.1;\n    var relativeHumidity = twoComplementTwoByte(bufString.substring(4, 8)) * 0.1;\n    var batteryVoltage = twoComplementTwoByte(bufString.substring(32, 36)) * 0.001;\n    \n    return [\n        {\n            payload: parseFloat(internalTemperature.toFixed(1))\n        },\n        {\n            payload: parseFloat(relativeHumidity.toFixed(1))\n        }\n    ];\n    \n    \n    //newMsg.payload = parseFloat(internalTemperature.toFixed(1));\n    //newMsg.payload.externalTemperature = parseFloat(externalTemperature.toFixed(1));\n    //newMsg.payload.relativeHumidity = parseFloat(relativeHumidity.toFixed(1));\n    //newMsg.payload.batteryVoltage = parseFloat(batteryVoltage.toFixed(2));\n}\n\nfunction twoComplementTwoByte(hex){\n    var signed = parseInt(hex,16) & 0x8000;                                 //is first bit signed? 0 = positive number; >0 = negative number\n    if(signed > 0){\n        var binaryString = parseInt(hex,16).toString(2);                    //convert hex to binary string\n        for(var i=0; i<binaryString.length; i++){                           //invert all bits of string\n            if(binaryString.charAt(i) === \"0\"){\n                binaryString = setCharAt(binaryString, i, \"1\");\n            }else{\n                binaryString = setCharAt(binaryString, i, \"0\");\n            }\n        }\n        return (parseInt(binaryString, 2) + 1) * -1;\n    }else{\n        return parseInt(hex, 16);\n    }\n    \n}\n\nfunction setCharAt(str, index, chr) {\n    if (index > str.length - 1) return str;\n    return str.substring(0, index) + chr + str.substring(index + 1);\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 260,
+        "wires": [
+            [
+                "ecca3a7ba5747241",
+                "c3da923b3fc32999",
+                "0d21cde40fc5cb26"
+            ],
+            [
+                "88b424dcb79592d3",
+                "935cedb6fb98d618",
+                "26e9d79773d933ba"
+            ]
+        ]
+    },
+    {
+        "id": "c582f73887abb34a",
+        "type": "inject",
+        "z": "c6d094c219386009",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"end_device_ids\":{\"device_id\":\"eui-45405200000010e0\",\"application_ids\":{\"application_id\":\"weinsberg-temperatur\"},\"dev_eui\":\"45405200000010E0\",\"join_eui\":\"8C918D99DE489900\",\"dev_addr\":\"260B085E\"},\"correlation_ids\":[\"as:up:01GM09NK46W4KMEWBWXKNTBPKJ\",\"gs:conn:01GKZ1NEBNZ1C41V0BEXKPZTXB\",\"gs:up:host:01GKZ1NEBR8340H0H2H4P72NNK\",\"gs:uplink:01GM09NJXQ178RYWA45TV2CWT6\",\"ns:uplink:01GM09NJXRGT58J46TF4DN9MSJ\",\"rpc:/ttn.lorawan.v3.GsNs/HandleUplink:01GM09NJXR8PM7WTK7N1T3X3BG\",\"rpc:/ttn.lorawan.v3.NsAs/HandleUplink:01GM09NK46V26DRYAJ05KWH7CD\"],\"received_at\":\"2022-12-11T09:53:43.046424905Z\",\"uplink_message\":{\"session_key_id\":\"AYATXBSMLGOg/b00fr9oMA==\",\"f_port\":4,\"f_cnt\":23222,\"frm_payload\":\"//kDHwAAAAAAAAAAAAAAAA3gAA==\",\"rx_metadata\":[{\"gateway_ids\":{\"gateway_id\":\"acker-wsbg-gtw\",\"eui\":\"A840411DA39C4150\"},\"time\":\"2022-12-11T09:53:42.823217Z\",\"timestamp\":533919971,\"rssi\":-60,\"channel_rssi\":-60,\"snr\":9.8,\"uplink_token\":\"ChwKGgoOYWNrZXItd3NiZy1ndHcSCKhAQR2jnEFQEOPxy/4BGgwIptHWnAYQ3ZarkAMguO3wgMW+Gg==\",\"received_at\":\"2022-12-11T09:53:42.817025024Z\"}],\"settings\":{\"data_rate\":{\"lora\":{\"bandwidth\":125000,\"spreading_factor\":7,\"coding_rate\":\"4/5\"}},\"frequency\":\"868100000\",\"timestamp\":533919971,\"time\":\"2022-12-11T09:53:42.823217Z\"},\"received_at\":\"2022-12-11T09:53:42.840492484Z\",\"consumed_airtime\":\"0.071936s\",\"network_ids\":{\"net_id\":\"000013\",\"tenant_id\":\"ttn\",\"cluster_id\":\"eu1\",\"cluster_address\":\"eu1.cloud.thethings.network\"}}}",
+        "payloadType": "json",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "a9f83725780b102a"
+            ]
+        ]
+    },
+    {
+        "id": "ecca3a7ba5747241",
+        "type": "ui_chart",
+        "z": "c6d094c219386009",
+        "name": "",
+        "group": "8d90814a.52bc88",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatur Außen [°C]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1020,
+        "y": 240,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "88b424dcb79592d3",
+        "type": "ui_chart",
+        "z": "c6d094c219386009",
+        "name": "",
+        "group": "8d90814a.52bc88",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Feuchte Außen [%]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1010,
+        "y": 320,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c3da923b3fc32999",
+        "type": "ui_text",
+        "z": "c6d094c219386009",
+        "group": "8d90814a.52bc88",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperatur Außen",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "x": 1010,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "935cedb6fb98d618",
+        "type": "ui_text",
+        "z": "c6d094c219386009",
+        "group": "8d90814a.52bc88",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feuchte Außen",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "x": 1000,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "0d21cde40fc5cb26",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "transfer sensor temperature",
+        "func": "var obj =  {\n    \"Weinsberg-Terrasse\": [\n        {\n        \"ts\": new Date().getTime(),\n            \"values\": {\n                \"temperature\": msg.payload\n            }\n        }\n    ]\n};\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 380,
+        "wires": [
+            [
+                "63d96d20e1df69cc"
+            ]
+        ]
+    },
+    {
+        "id": "63d96d20e1df69cc",
+        "type": "mqtt out",
+        "z": "c6d094c219386009",
+        "name": "",
+        "topic": "v1/gateway/telemetry",
+        "qos": "1",
+        "retain": "false",
+        "broker": "7c2fdc47.2803dc",
+        "x": 1300,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "26e9d79773d933ba",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "transfer sensor humidity",
+        "func": "var obj =  {\n    \"Weinsberg-Terrasse\": [\n        {\n        \"ts\": new Date().getTime(),\n            \"values\": {\n                \"humidity\": msg.payload\n            }\n        }\n    ]\n};\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 420,
+        "wires": [
+            [
+                "63d96d20e1df69cc"
+            ]
+        ]
+    },
+    {
+        "id": "d4439a4b2141bfbc",
+        "type": "inject",
+        "z": "c6d094c219386009",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 790,
+        "y": 400,
+        "wires": [
+            [
+                "0d21cde40fc5cb26"
+            ]
+        ]
+    },
+    {
+        "id": "32efd547f93708ec",
+        "type": "mqtt in",
+        "z": "c6d094c219386009",
+        "name": "",
+        "topic": "v3/weinsberg-temperatur@ttn/devices/eui-45405200000010d9/up",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "8322649a.5a2438",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 250,
+        "y": 500,
+        "wires": [
+            [
+                "21b1769973232126"
+            ]
+        ]
+    },
+    {
+        "id": "49f9d26eed1b9351",
+        "type": "debug",
+        "z": "c6d094c219386009",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 730,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "21b1769973232126",
+        "type": "json",
+        "z": "c6d094c219386009",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 550,
+        "y": 500,
+        "wires": [
+            [
+                "49f9d26eed1b9351",
+                "628ae3eff5e3c91d"
+            ]
+        ]
+    },
+    {
+        "id": "628ae3eff5e3c91d",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "Skysens payload conversion",
+        "func": "let frm_payload = msg.payload.uplink_message.frm_payload;\nlet buffer = Buffer.from(frm_payload, 'base64');\nlet bufString = buffer.toString('hex');\n\nif( msg.payload.uplink_message.f_port === 4 ){\n    var internalTemperature = twoComplementTwoByte(bufString.substring(0, 4)) * 0.1;\n    //var externalTemperature = twoComplementTwoByte(bufString.substring(8, 12)) * 0.1;\n    var relativeHumidity = twoComplementTwoByte(bufString.substring(4, 8)) * 0.1;\n    var batteryVoltage = twoComplementTwoByte(bufString.substring(32, 36)) * 0.001;\n    \n    return [\n        {\n            payload: parseFloat(internalTemperature.toFixed(1))\n        },\n        {\n            payload: parseFloat(relativeHumidity.toFixed(1))\n        }\n    ];\n    \n    \n    //newMsg.payload = parseFloat(internalTemperature.toFixed(1));\n    //newMsg.payload.externalTemperature = parseFloat(externalTemperature.toFixed(1));\n    //newMsg.payload.relativeHumidity = parseFloat(relativeHumidity.toFixed(1));\n    //newMsg.payload.batteryVoltage = parseFloat(batteryVoltage.toFixed(2));\n}\n\nfunction twoComplementTwoByte(hex){\n    var signed = parseInt(hex,16) & 0x8000;                                 //is first bit signed? 0 = positive number; >0 = negative number\n    if(signed > 0){\n        var binaryString = parseInt(hex,16).toString(2);                    //convert hex to binary string\n        for(var i=0; i<binaryString.length; i++){                           //invert all bits of string\n            if(binaryString.charAt(i) === \"0\"){\n                binaryString = setCharAt(binaryString, i, \"1\");\n            }else{\n                binaryString = setCharAt(binaryString, i, \"0\");\n            }\n        }\n        return (parseInt(binaryString, 2) + 1) * -1;\n    }else{\n        return parseInt(hex, 16);\n    }\n    \n}\n\nfunction setCharAt(str, index, chr) {\n    if (index > str.length - 1) return str;\n    return str.substring(0, index) + chr + str.substring(index + 1);\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 580,
+        "wires": [
+            [
+                "3e8fed42b907d2a1",
+                "7d5e2d911eae1ec6",
+                "5c2d346c90bcc3bf"
+            ],
+            [
+                "52caca64dcf7fac9",
+                "2e752399a9d73d0a",
+                "bf7cebf0e6c8ad85"
+            ]
+        ]
+    },
+    {
+        "id": "8f431fcaf1cb5888",
+        "type": "inject",
+        "z": "c6d094c219386009",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"end_device_ids\":{\"device_id\":\"eui-45405200000010e0\",\"application_ids\":{\"application_id\":\"weinsberg-temperatur\"},\"dev_eui\":\"45405200000010E0\",\"join_eui\":\"8C918D99DE489900\",\"dev_addr\":\"260B085E\"},\"correlation_ids\":[\"as:up:01GM09NK46W4KMEWBWXKNTBPKJ\",\"gs:conn:01GKZ1NEBNZ1C41V0BEXKPZTXB\",\"gs:up:host:01GKZ1NEBR8340H0H2H4P72NNK\",\"gs:uplink:01GM09NJXQ178RYWA45TV2CWT6\",\"ns:uplink:01GM09NJXRGT58J46TF4DN9MSJ\",\"rpc:/ttn.lorawan.v3.GsNs/HandleUplink:01GM09NJXR8PM7WTK7N1T3X3BG\",\"rpc:/ttn.lorawan.v3.NsAs/HandleUplink:01GM09NK46V26DRYAJ05KWH7CD\"],\"received_at\":\"2022-12-11T09:53:43.046424905Z\",\"uplink_message\":{\"session_key_id\":\"AYATXBSMLGOg/b00fr9oMA==\",\"f_port\":4,\"f_cnt\":23222,\"frm_payload\":\"//kDHwAAAAAAAAAAAAAAAA3gAA==\",\"rx_metadata\":[{\"gateway_ids\":{\"gateway_id\":\"acker-wsbg-gtw\",\"eui\":\"A840411DA39C4150\"},\"time\":\"2022-12-11T09:53:42.823217Z\",\"timestamp\":533919971,\"rssi\":-60,\"channel_rssi\":-60,\"snr\":9.8,\"uplink_token\":\"ChwKGgoOYWNrZXItd3NiZy1ndHcSCKhAQR2jnEFQEOPxy/4BGgwIptHWnAYQ3ZarkAMguO3wgMW+Gg==\",\"received_at\":\"2022-12-11T09:53:42.817025024Z\"}],\"settings\":{\"data_rate\":{\"lora\":{\"bandwidth\":125000,\"spreading_factor\":7,\"coding_rate\":\"4/5\"}},\"frequency\":\"868100000\",\"timestamp\":533919971,\"time\":\"2022-12-11T09:53:42.823217Z\"},\"received_at\":\"2022-12-11T09:53:42.840492484Z\",\"consumed_airtime\":\"0.071936s\",\"network_ids\":{\"net_id\":\"000013\",\"tenant_id\":\"ttn\",\"cluster_id\":\"eu1\",\"cluster_address\":\"eu1.cloud.thethings.network\"}}}",
+        "payloadType": "json",
+        "x": 380,
+        "y": 580,
+        "wires": [
+            [
+                "628ae3eff5e3c91d"
+            ]
+        ]
+    },
+    {
+        "id": "3e8fed42b907d2a1",
+        "type": "ui_chart",
+        "z": "c6d094c219386009",
+        "name": "",
+        "group": "ba15319204825fdf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatur Wohnzimmer [°C]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1050,
+        "y": 560,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "52caca64dcf7fac9",
+        "type": "ui_chart",
+        "z": "c6d094c219386009",
+        "name": "",
+        "group": "ba15319204825fdf",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Feuchte Wohnzimmer [%]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1030,
+        "y": 640,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7d5e2d911eae1ec6",
+        "type": "ui_text",
+        "z": "c6d094c219386009",
+        "group": "ba15319204825fdf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperatur Wohnzimmer",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "x": 1030,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2e752399a9d73d0a",
+        "type": "ui_text",
+        "z": "c6d094c219386009",
+        "group": "ba15319204825fdf",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feuchte Wohnzimmer",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "x": 1020,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "5c2d346c90bcc3bf",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "transfer sensor temperature",
+        "func": "var obj =  {\n    \"Weinsberg-Wohnzimmer-Wand\": [\n        {\n        \"ts\": new Date().getTime(),\n            \"values\": {\n                \"temperature\": msg.payload\n            }\n        }\n    ]\n};\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 700,
+        "wires": [
+            [
+                "24b7a1257102ad36"
+            ]
+        ]
+    },
+    {
+        "id": "24b7a1257102ad36",
+        "type": "mqtt out",
+        "z": "c6d094c219386009",
+        "name": "",
+        "topic": "v1/gateway/telemetry",
+        "qos": "1",
+        "retain": "false",
+        "broker": "7c2fdc47.2803dc",
+        "x": 1300,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "bf7cebf0e6c8ad85",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "transfer sensor humidity",
+        "func": "var obj =  {\n    \"Weinsberg-Wohnzimmer-Wand\": [\n        {\n        \"ts\": new Date().getTime(),\n            \"values\": {\n                \"humidity\": msg.payload\n            }\n        }\n    ]\n};\n\nmsg.payload = obj;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 740,
+        "wires": [
+            [
+                "24b7a1257102ad36"
+            ]
+        ]
+    },
+    {
+        "id": "315ca24d8d4c849e",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "Skysens payload conversion Chirpstack",
+        "func": "let frm_payload = msg.payload.data;\nlet buffer = Buffer.from(frm_payload, 'base64');\nlet bufString = buffer.toString('hex');\n\nif (msg.payload.fPort === 4 ){\n    var internalTemperature = twoComplementTwoByte(bufString.substring(0, 4)) * 0.1;\n    //var externalTemperature = twoComplementTwoByte(bufString.substring(8, 12)) * 0.1;\n    var relativeHumidity = twoComplementTwoByte(bufString.substring(4, 8)) * 0.1;\n    var batteryVoltage = twoComplementTwoByte(bufString.substring(32, 36)) * 0.001;\n    \n    return [\n        {\n            payload: parseFloat(internalTemperature.toFixed(1))\n        },\n        {\n            payload: parseFloat(relativeHumidity.toFixed(1))\n        }\n    ];\n    \n    \n    //newMsg.payload = parseFloat(internalTemperature.toFixed(1));\n    //newMsg.payload.externalTemperature = parseFloat(externalTemperature.toFixed(1));\n    //newMsg.payload.relativeHumidity = parseFloat(relativeHumidity.toFixed(1));\n    //newMsg.payload.batteryVoltage = parseFloat(batteryVoltage.toFixed(2));\n}\n\nfunction twoComplementTwoByte(hex){\n    var signed = parseInt(hex,16) & 0x8000;                                 //is first bit signed? 0 = positive number; >0 = negative number\n    if(signed > 0){\n        var binaryString = parseInt(hex,16).toString(2);                    //convert hex to binary string\n        for(var i=0; i<binaryString.length; i++){                           //invert all bits of string\n            if(binaryString.charAt(i) === \"0\"){\n                binaryString = setCharAt(binaryString, i, \"1\");\n            }else{\n                binaryString = setCharAt(binaryString, i, \"0\");\n            }\n        }\n        return (parseInt(binaryString, 2) + 1) * -1;\n    }else{\n        return parseInt(hex, 16);\n    }\n    \n}\n\nfunction setCharAt(str, index, chr) {\n    if (index > str.length - 1) return str;\n    return str.substring(0, index) + chr + str.substring(index + 1);\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 300,
+        "wires": [
+            [
+                "0d21cde40fc5cb26",
+                "ecca3a7ba5747241",
+                "c3da923b3fc32999"
+            ],
+            [
+                "935cedb6fb98d618",
+                "88b424dcb79592d3",
+                "26e9d79773d933ba"
+            ]
+        ]
+    },
+    {
+        "id": "1ff47744fa958369",
+        "type": "mqtt in",
+        "z": "c6d094c219386009",
+        "name": "chirpstack",
+        "topic": "chirpstack/application/c097ba1d-a25b-440d-8a32-4c68cb64ef61/device/45405200000010e0/event/up",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "59e6a817.0bc108",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "315ca24d8d4c849e"
+            ]
+        ]
+    },
+    {
+        "id": "74cb75ebbc6ed71b",
+        "type": "function",
+        "z": "c6d094c219386009",
+        "name": "Skysens payload conversion Chirpstack",
+        "func": "let frm_payload = msg.payload.data;\nlet buffer = Buffer.from(frm_payload, 'base64');\nlet bufString = buffer.toString('hex');\n\nif (msg.payload.fPort === 4 ){\n    var internalTemperature = twoComplementTwoByte(bufString.substring(0, 4)) * 0.1;\n    //var externalTemperature = twoComplementTwoByte(bufString.substring(8, 12)) * 0.1;\n    var relativeHumidity = twoComplementTwoByte(bufString.substring(4, 8)) * 0.1;\n    var batteryVoltage = twoComplementTwoByte(bufString.substring(32, 36)) * 0.001;\n    \n    return [\n        {\n            payload: parseFloat(internalTemperature.toFixed(1))\n        },\n        {\n            payload: parseFloat(relativeHumidity.toFixed(1))\n        }\n    ];\n    \n    \n    //newMsg.payload = parseFloat(internalTemperature.toFixed(1));\n    //newMsg.payload.externalTemperature = parseFloat(externalTemperature.toFixed(1));\n    //newMsg.payload.relativeHumidity = parseFloat(relativeHumidity.toFixed(1));\n    //newMsg.payload.batteryVoltage = parseFloat(batteryVoltage.toFixed(2));\n}\n\nfunction twoComplementTwoByte(hex){\n    var signed = parseInt(hex,16) & 0x8000;                                 //is first bit signed? 0 = positive number; >0 = negative number\n    if(signed > 0){\n        var binaryString = parseInt(hex,16).toString(2);                    //convert hex to binary string\n        for(var i=0; i<binaryString.length; i++){                           //invert all bits of string\n            if(binaryString.charAt(i) === \"0\"){\n                binaryString = setCharAt(binaryString, i, \"1\");\n            }else{\n                binaryString = setCharAt(binaryString, i, \"0\");\n            }\n        }\n        return (parseInt(binaryString, 2) + 1) * -1;\n    }else{\n        return parseInt(hex, 16);\n    }\n    \n}\n\nfunction setCharAt(str, index, chr) {\n    if (index > str.length - 1) return str;\n    return str.substring(0, index) + chr + str.substring(index + 1);\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 660,
+        "wires": [
+            [
+                "7d5e2d911eae1ec6",
+                "3e8fed42b907d2a1",
+                "5c2d346c90bcc3bf"
+            ],
+            [
+                "2e752399a9d73d0a",
+                "52caca64dcf7fac9",
+                "bf7cebf0e6c8ad85"
+            ]
+        ]
+    },
+    {
+        "id": "d450cc3033da62bf",
+        "type": "mqtt in",
+        "z": "c6d094c219386009",
+        "name": "chirpstack",
+        "topic": "chirpstack/application/c097ba1d-a25b-440d-8a32-4c68cb64ef61/device/45405200000010d9/event/up",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "59e6a817.0bc108",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "74cb75ebbc6ed71b"
+            ]
+        ]
+    },
+    {
+        "id": "a0b623f07cad3cea",
+        "type": "inject",
+        "z": "c6d094c219386009",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deduplicationId\":\"8d82ffad-401e-4bdd-9c5f-f2aeb60ada14\",\"time\":\"2023-02-11T19:03:05.498095+00:00\",\"deviceInfo\":{\"tenantId\":\"e8856cca-7e75-40c6-8a30-1020f3703db5\",\"tenantName\":\"Acker\",\"applicationId\":\"c097ba1d-a25b-440d-8a32-4c68cb64ef61\",\"applicationName\":\"Weinsberg\",\"deviceProfileId\":\"927d5ff5-cc0e-47ab-8c08-42906349ea32\",\"deviceProfileName\":\"Skysens\",\"deviceName\":\"45405200000010E0\",\"devEui\":\"45405200000010e0\",\"tags\":{}},\"devAddr\":\"01bb7e20\",\"adr\":true,\"dr\":5,\"fCnt\":4,\"fPort\":4,\"confirmed\":false,\"data\":\"AEMCfgAAAAAAAAAAAAAAAA4AAA==\",\"rxInfo\":[{\"gatewayId\":\"a840411da39c4150\",\"uplinkId\":35807,\"time\":\"2023-02-11T19:03:05.498095+00:00\",\"rssi\":-64,\"snr\":6.8,\"channel\":5,\"location\":{},\"context\":\"86x4BA==\",\"metadata\":{\"region_config_id\":\"eu868\",\"region_common_name\":\"EU868\"},\"crcStatus\":\"CRC_OK\"}],\"txInfo\":{\"frequency\":867500000,\"modulation\":{\"lora\":{\"bandwidth\":125000,\"spreadingFactor\":7,\"codeRate\":\"CR_4_5\"}}}}",
+        "payloadType": "json",
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "315ca24d8d4c849e"
+            ]
+        ]
+    },
+    {
+        "id": "ac5bcf70.c6dcd",
+        "type": "http in",
+        "z": "83413677.e09c5",
+        "name": "",
+        "url": "/werkstatt_longpress",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "130353a1.449dbc"
+            ]
+        ]
+    },
+    {
+        "id": "130353a1.449dbc",
+        "type": "debug",
+        "z": "83413677.e09c5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 550,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "95a0956f.fef958",
+        "type": "mqtt in",
+        "z": "83413677.e09c5",
+        "name": "",
+        "topic": "test/sender",
+        "qos": "2",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "fa207040.a5dfb"
+            ]
+        ]
+    },
+    {
+        "id": "9f286f66.4dbe28",
+        "type": "debug",
+        "z": "83413677.e09c5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 530,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "fa207040.a5dfb",
+        "type": "json",
+        "z": "83413677.e09c5",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "9f286f66.4dbe28"
+            ]
+        ]
+    },
+    {
+        "id": "38ee29d55e767c29",
+        "type": "mqtt in",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/image",
+        "qos": "2",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "424a0ff801feef25",
+                "9eac21b60e79de24"
+            ]
+        ]
+    },
+    {
+        "id": "76ceb77325603403",
+        "type": "telegram sender",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "bot": "9234f391.7ce6d8",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 80,
+        "wires": [
+            [
+                "35b2d3bba9310bb9"
+            ]
+        ]
+    },
+    {
+        "id": "424a0ff801feef25",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 450,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8428d59f859ad502",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "create payload",
+        "func": "msg.payload = {chatId: 313360891, type: \"photo\", content: \"/home/pi/Downloads/image.jpg\", caption:\"Wieslensdorf Raspi\"};\nnode.send(msg);\nmsg.payload = {chatId: 301478795, type: \"photo\", content: \"/home/pi/Downloads/image.jpg\", caption:\"Wieslensdorf Raspi\"};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 200,
+        "wires": [
+            [
+                "448df05b5b98faa7"
+            ]
+        ]
+    },
+    {
+        "id": "9eac21b60e79de24",
+        "type": "file",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "filename": "/home/pi/Downloads/image.jpg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "8428d59f859ad502",
+                "caf3563053eb0011"
+            ]
+        ]
+    },
+    {
+        "id": "caf3563053eb0011",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "448df05b5b98faa7",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 753,
+        "y": 228,
+        "wires": []
+    },
+    {
+        "id": "f64194d2b2aee1e9",
+        "type": "telegram command",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "command": "",
+        "bot": "9234f391.7ce6d8",
+        "strict": false,
+        "outputs": 2,
+        "x": 230,
+        "y": 380,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "66bc5ad7fc09aa9d",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "check ID",
+        "func": "if(msg.payload.chatId === 313360891 || msg.payload.chatId === 301478795){\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "50d5c80c77b1bba2",
+                "4ec5ccec5e980bd1"
+            ]
+        ]
+    },
+    {
+        "id": "50d5c80c77b1bba2",
+        "type": "mqtt out",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/image/make",
+        "qos": "2",
+        "retain": "false",
+        "broker": "59e6a817.0bc108",
+        "x": 670,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "dda840374b4eb3f7",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 430,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4ec5ccec5e980bd1",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 610,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f317eed139dc26da",
+        "type": "mqtt in",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/bytes",
+        "qos": "2",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 230,
+        "y": 760,
+        "wires": [
+            [
+                "d135b59b915dff97"
+            ]
+        ]
+    },
+    {
+        "id": "4ca0f847c3e0ba2e",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 610,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "56967bf311bd837d",
+        "type": "mqtt in",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/telemetry/all",
+        "qos": "2",
+        "broker": "59e6a817.0bc108",
+        "inputs": 0,
+        "x": 250,
+        "y": 820,
+        "wires": [
+            [
+                "97aa851cdeaad0d6"
+            ]
+        ]
+    },
+    {
+        "id": "b172d2b0d24e4e61",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 610,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "2b4d3a1cc1547a4a",
+        "type": "mqtt out",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/valve/central/action",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "59e6a817.0bc108",
+        "x": 510,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "01e1a2034929f70d",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "func": "global.set(\"traffic\", msg.payload);\nvar obj = {\n    \"Remote-Raspi\": [\n        {\n            \"ts\": new Date().getTime(),\n            \"values\": {\n                \"transmittedBytes\": msg.payload.transmitted.timespan * msg.payload.transmitted.bytesPerSec,\n                \"receivedBytes\": msg.payload.received.timespan * msg.payload.received.bytesPerSec\n            }\n        }\n    ]\n};\nmsg.topic = \"v1/gateway/telemetry\";\nmsg.payload = obj;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 760,
+        "wires": [
+            [
+                "6b0bd969d2f66ee9",
+                "12b32541363a45e0"
+            ]
+        ]
+    },
+    {
+        "id": "d135b59b915dff97",
+        "type": "json",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 450,
+        "y": 760,
+        "wires": [
+            [
+                "01e1a2034929f70d",
+                "4ca0f847c3e0ba2e"
+            ]
+        ]
+    },
+    {
+        "id": "97aa851cdeaad0d6",
+        "type": "json",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 450,
+        "y": 820,
+        "wires": [
+            [
+                "b172d2b0d24e4e61",
+                "76ada6c8709efffb"
+            ]
+        ]
+    },
+    {
+        "id": "76ada6c8709efffb",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "func": "global.set(\"measurements\", msg.payload);\nvar obj = {\n    \"Remote-Raspi\": [\n        {\n            \"ts\": msg.payload.ts,\n            \"values\": {\n                \"temperature\": msg.payload.environment.temp,\n                \"humidity\": msg.payload.environment.hum,\n                \"air_pressure\": msg.payload.environment.press,\n                \"battery_voltage\": msg.payload.battery.voltage_bus,\n                \"rain_voltage\": msg.payload.rain.voltage,\n                \"waterFillLevel\": msg.payload.waterFillLevel,\n                \"valve\": msg.payload.valve\n            }\n        }\n    ]\n};\nmsg.topic = \"v1/gateway/telemetry\";\nmsg.payload = obj;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 820,
+        "wires": [
+            [
+                "12b32541363a45e0",
+                "1d9ad07db3ac0961"
+            ]
+        ]
+    },
+    {
+        "id": "12b32541363a45e0",
+        "type": "mqtt out",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "v1/gateway/telemetry",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7c2fdc47.2803dc",
+        "x": 1040,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "722fe4a6d5aa1a68",
+        "type": "mqtt out",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "v1/gateway/attributes",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7c2fdc47.2803dc",
+        "x": 1020,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "1d9ad07db3ac0961",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 750,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "22d18bca8acf703c",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "func": "msg.payload = {\"Remote-Raspi\":[{\"ts\":1621702130038,\"values\":{\"temperature\":17.32,\"humidity\":33.75,\"air_pressure\":982.14,\"battery_voltage\":12.268,\"rain_voltage\":0.559,\"waterFillLevel\":0,\"valve\":\"closed\"}}]};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1000,
+        "wires": [
+            [
+                "12b32541363a45e0",
+                "f6210c57912d89d4"
+            ]
+        ]
+    },
+    {
+        "id": "d058dfc1f5bf11b4",
+        "type": "inject",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 740,
+        "y": 1000,
+        "wires": [
+            [
+                "22d18bca8acf703c"
+            ]
+        ]
+    },
+    {
+        "id": "f6210c57912d89d4",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "6b0bd969d2f66ee9",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 770,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "35b2d3bba9310bb9",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1150,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a031a8b65dabc3b4",
+        "type": "inject",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 190,
+        "y": 940,
+        "wires": [
+            [
+                "2b4d3a1cc1547a4a"
+            ]
+        ]
+    },
+    {
+        "id": "be9dbea86351e3b7",
+        "type": "inject",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 190,
+        "y": 980,
+        "wires": [
+            [
+                "2b4d3a1cc1547a4a"
+            ]
+        ]
+    },
+    {
+        "id": "38304d80c7ecbc17",
+        "type": "inject",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "timer 10",
+        "payloadType": "str",
+        "x": 190,
+        "y": 1020,
+        "wires": [
+            [
+                "2b4d3a1cc1547a4a"
+            ]
+        ]
+    },
+    {
+        "id": "0ce12acadb5b10d3",
+        "type": "inject",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "22:29",
+        "payloadType": "str",
+        "x": 190,
+        "y": 1100,
+        "wires": [
+            [
+                "dab6eeb9e94ab722"
+            ]
+        ]
+    },
+    {
+        "id": "88f7c5673f49cccc",
+        "type": "inject",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "22:30",
+        "payloadType": "str",
+        "x": 190,
+        "y": 1160,
+        "wires": [
+            [
+                "96c68b48035743fb"
+            ]
+        ]
+    },
+    {
+        "id": "dab6eeb9e94ab722",
+        "type": "mqtt out",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/valve/central/on_override",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "59e6a817.0bc108",
+        "x": 530,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "96c68b48035743fb",
+        "type": "mqtt out",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/valve/central/off_override",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "59e6a817.0bc108",
+        "x": 530,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "239864ce22701a04",
+        "type": "telegram receiver",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "bot": "9234f391.7ce6d8",
+        "saveDataDir": "",
+        "x": 220,
+        "y": 580,
+        "wires": [
+            [
+                "7f39895123dad2a6",
+                "2b92bd167c5c8d52"
+            ],
+            [
+                "0b783101f7e7e5e5"
+            ]
+        ]
+    },
+    {
+        "id": "7f39895123dad2a6",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 250,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "0b783101f7e7e5e5",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 250,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c2204308fc7125de",
+        "type": "inject",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "auto",
+        "payloadType": "str",
+        "x": 190,
+        "y": 1060,
+        "wires": [
+            [
+                "2b4d3a1cc1547a4a"
+            ]
+        ]
+    },
+    {
+        "id": "2b92bd167c5c8d52",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "direct irrigation control",
+        "func": "if(msg.payload.content === \"Bewässerung AUS\"){\n    return [\n        {\n            payload: \"off\"\n        },\n        {\n            payload: {chatId: msg.payload.chatId, type: \"message\", content: \"Bewässerungs-System wird konfiguriert!\"}\n        }\n    ];\n}else if(msg.payload.content === \"Bewässerung EIN\"){\n    return [\n        {\n            payload: \"on\"\n        },\n        {\n            payload: {chatId: msg.payload.chatId, type: \"message\", content: \"Bewässerungs-System wird konfiguriert!\"}\n        }\n    ];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 540,
+        "wires": [
+            [
+                "7d9aa974b4d31a6f"
+            ],
+            [
+                "4adf37263d734f71"
+            ]
+        ]
+    },
+    {
+        "id": "22072679e562af93",
+        "type": "link in",
+        "z": "472d8512887a7d9d",
+        "name": "send message telegram",
+        "links": [
+            "4adf37263d734f71",
+            "d63803ef87d1b9b1",
+            "4bab62e2.f70bec"
+        ],
+        "x": 815,
+        "y": 80,
+        "wires": [
+            [
+                "76ceb77325603403"
+            ]
+        ]
+    },
+    {
+        "id": "7d9aa974b4d31a6f",
+        "type": "link out",
+        "z": "472d8512887a7d9d",
+        "name": "direct irrigation control",
+        "links": [
+            "b1b6145c2ebc16a0"
+        ],
+        "x": 655,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b1b6145c2ebc16a0",
+        "type": "link in",
+        "z": "472d8512887a7d9d",
+        "name": "send irrigation action",
+        "links": [
+            "7d9aa974b4d31a6f"
+        ],
+        "x": 215,
+        "y": 900,
+        "wires": [
+            [
+                "2b4d3a1cc1547a4a"
+            ]
+        ]
+    },
+    {
+        "id": "4adf37263d734f71",
+        "type": "link out",
+        "z": "472d8512887a7d9d",
+        "name": "direct irrigation control telegram",
+        "links": [
+            "22072679e562af93"
+        ],
+        "x": 655,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "84e12945eda705d7",
+        "type": "mqtt in",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/valve/remote/ack",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "59e6a817.0bc108",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 260,
+        "y": 1280,
+        "wires": [
+            [
+                "6b08506aad796459",
+                "012de1764e4fb93c"
+            ]
+        ]
+    },
+    {
+        "id": "6b08506aad796459",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "ack message to telegram",
+        "func": "return {  \n    payload: {\n        chatId: 313360891, \n        type: \"message\", \n        content: \"Empfangener Befehl: \" + msg.payload\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1280,
+        "wires": [
+            [
+                "d63803ef87d1b9b1"
+            ]
+        ]
+    },
+    {
+        "id": "012de1764e4fb93c",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "d63803ef87d1b9b1",
+        "type": "link out",
+        "z": "472d8512887a7d9d",
+        "name": "message to telegram",
+        "links": [
+            "22072679e562af93"
+        ],
+        "x": 735,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "84f89f2a89944ad0",
+        "type": "mqtt in",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/valve/remote/state",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "59e6a817.0bc108",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 270,
+        "y": 1380,
+        "wires": [
+            [
+                "5074d733c94cc578",
+                "e63196efd797ebc1"
+            ]
+        ]
+    },
+    {
+        "id": "5074d733c94cc578",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "state message to telegram",
+        "func": "return {  \n    payload: {\n        chatId: 313360891, \n        type: \"message\", \n        content: \"Ventil Status: \" + msg.payload\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1380,
+        "wires": [
+            [
+                "d63803ef87d1b9b1"
+            ]
+        ]
+    },
+    {
+        "id": "e63196efd797ebc1",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "5ac21b7082f696a8",
+        "type": "mqtt in",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "topic": "remote-raspi/mqtt/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "59e6a817.0bc108",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 230,
+        "y": 1480,
+        "wires": [
+            [
+                "c949d0b500206da4",
+                "e73444081fee1f36"
+            ]
+        ]
+    },
+    {
+        "id": "c949d0b500206da4",
+        "type": "function",
+        "z": "472d8512887a7d9d",
+        "name": "state message to telegram",
+        "func": "return {  \n    payload: {\n        chatId: 313360891, \n        type: \"message\", \n        content: \"MQTT Status: \" + msg.payload\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1480,
+        "wires": [
+            [
+                "d63803ef87d1b9b1"
+            ]
+        ]
+    },
+    {
+        "id": "e73444081fee1f36",
+        "type": "debug",
+        "z": "472d8512887a7d9d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1440,
+        "wires": []
+    }
+]

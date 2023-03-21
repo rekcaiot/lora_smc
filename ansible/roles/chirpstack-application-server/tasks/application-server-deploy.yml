@@ -1,0 +1,45 @@
+---
+- name: include postgres init role for as
+  include_role: 
+    name: postgres
+    tasks_from: postgres-init-chirpstack-as
+  vars:
+    postgres_instance_name: "{{ postgres_name }}"
+- name: include postgres deploy role for as
+  include_role: 
+    name: postgres
+    tasks_from: postgres-deploy
+  vars:
+    postgres_instance_name: "{{ postgres_name }}"
+    postgres_instance_port: "{{ postgres_port }}"
+
+- name: include redis deploy role for as
+  include_role: 
+    name: redis
+    tasks_from: redis-deploy
+  vars:
+    redis_instance_name: "{{ redis_name }}"
+    redis_instance_port: "{{ redis_port }}"
+
+- name: create chirpstack as directory
+  ansible.builtin.file:
+    path: "{{ chirpstack_application_server_dir }}"
+    state: directory
+    mode: '0755'
+- name: copy chirpstack as config
+  ansible.builtin.template:
+    src: chirpstack-application-server.toml
+    dest: "{{ chirpstack_application_server_dir }}/chirpstack-application-server.toml"
+    owner: "{{ chirpstack_owner }}"
+    group: "{{ chirpstack_group }}"
+    mode: '0644'
+- name: re-create chirpstack as container
+  docker_container:
+    name: ChirpstackApplicationServer
+    image: chirpstack/chirpstack-application-server
+    state: started
+    recreate: yes
+    restart_policy: always
+    network_mode: host
+    volumes:
+      - "{{ chirpstack_application_server_dir }}:/etc/chirpstack-application-server"

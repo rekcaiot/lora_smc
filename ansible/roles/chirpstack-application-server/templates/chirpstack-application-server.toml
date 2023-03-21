@@ -1,0 +1,26 @@
+# See https://www.chirpstack.io/application-server/install/config/ for a full
+# configuration example and documentation.
+
+[postgresql]
+dsn="postgres://chirpstack_as:{{ postgres_chirpstack_as_password }}@localhost:{{ postgres_port }}/chirpstack_as?sslmode=disable"
+
+[redis]
+url="redis://localhost:{{ redis_port }}"
+
+[application_server.integration.mqtt]
+server="tcp://localhost:1883"
+username="{{ mqtt_user }}"
+password="{{ mqtt_password }}"
+qos=2
+max_reconnect_interval="1m0s"
+clean_session=true
+client_id="chirpstack_as"
+
+[application_server.api]
+# ip:port to bind the api server
+bind="0.0.0.0:8001"
+public_host="192.168.178.86:8001"
+
+[application_server.external_api]
+bind="0.0.0.0:8080"
+jwt_secret="verysecret"

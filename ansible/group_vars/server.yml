@@ -1,0 +1,8 @@
+---
+ansible_user: root
+ansible_python_interpreter: "/usr/bin/python3"
+ansible_find_certs_path: files/certs
+certs_dir_on_target: /opt/certs
+certs_owner: root
+certs_group: root
+

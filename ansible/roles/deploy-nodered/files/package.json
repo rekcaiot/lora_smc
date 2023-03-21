@@ -1,0 +1,18 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {
+        "node-red-dashboard": "~2.13.2",
+        "node-red-contrib-telegrambot": "10.2.0",
+        "node-red-node-ping": "0.3.1",
+        "node-red-node-google": "0.2.2",
+        "node-red-node-mysql": "0.3.0"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}

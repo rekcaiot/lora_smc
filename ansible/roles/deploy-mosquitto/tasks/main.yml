@@ -1,0 +1,57 @@
+---
+- name: create mosquitto config directory
+  ansible.builtin.file:
+    path: "{{ mosquittoRootDir }}/config"
+    state: directory
+    mode: '0755'
+- name: create mosquitto log directory
+  ansible.builtin.file:
+    path: "{{ mosquittoRootDir }}/log"
+    state: directory
+    mode: '0755'
+- name: create mosquitto data directory
+  ansible.builtin.file:
+    path: "{{ mosquittoRootDir }}/data"
+    state: directory
+    mode: '0755'
+#- name: create git directory
+#  ansible.builtin.file:
+#    path: "/opt/git"
+#    state: directory
+#    mode: '0755'
+#- name: install git
+#  apt:
+#    name: git
+#    state: present
+#    update_cache: yes
+#- name: clone github project
+#  ansible.builtin.git:
+#    repo: "https://rekcaiot:{{ git_token }}@github.com/rekcaiot/rekca.home.git"
+#    dest: /opt/git
+- name: copy mosquitto config
+  ansible.builtin.copy:
+    src: mosquitto.conf
+    dest: "{{ mosquittoRootDir }}/config/mosquitto.conf"
+    owner: "{{ mosquitto_owner }}"
+    group: "{{ mosquitto_group }}"
+    mode: '0644'
+- name: copy mosquitto passwd file
+  ansible.builtin.copy:
+    src: passwd
+    dest: "{{ mosquittoRootDir }}/config/passwd"
+    owner: "{{ mosquitto_owner }}"
+    group: "{{ mosquitto_group }}"
+    mode: '0644'
+- name: re-create mosquitto container
+  docker_container:
+    name: Mosquitto
+    image: eclipse-mosquitto
+    state: started
+    recreate: yes
+    restart_policy: always
+    network_mode: host
+    volumes:
+      - /opt/mosquitto/config:/mosquitto/config
+      - /opt/mosquitto/data:/mosquitto/data
+      - /opt/mosquitto/log:/mosquitto/log
+      - /opt/certs:/mosquitto/certs

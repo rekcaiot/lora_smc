@@ -1,0 +1,37 @@
+---
+- name: create thingsboard dir
+  ansible.builtin.file:
+    path: "{{ thingsboard_home_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: create mytb-data dir
+  ansible.builtin.file:
+    path: "{{ thingsboard_home_dir }}/mytb-data"
+    state: directory
+    owner: "799"
+    group: "799"
+    mode: "0755"
+
+- name: create mytb-logs dir
+  ansible.builtin.file:
+    path: "{{ thingsboard_home_dir }}/mytb-logs"
+    state: directory
+    owner: "799"
+    group: "799"
+    mode: "0755"
+
+- name: re-create thingsboard container
+  docker_container:
+    name: thingsboard
+    image: thingsboard/tb-postgres:3.3.4.1-CVE22965
+    state: started
+    recreate: yes
+    restart_policy: always
+    ports:
+      - "192.168.178.86:9090:9090/tcp"
+      - "192.168.178.86:1884:1883/tcp"
+      - "192.168.178.86:7070:7070/tcp"
+    volumes:
+      - "{{ thingsboard_home_dir }}/mytb-data:/data"
+      - "{{ thingsboard_home_dir }}/mytb-logs:/var/log/thingsboard"

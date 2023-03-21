@@ -1,0 +1,4 @@
+---
+mosquittoRootDir: /opt/mosquitto
+mosquitto_owner: root
+mosquitto_group: root

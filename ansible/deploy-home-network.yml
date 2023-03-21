@@ -1,0 +1,19 @@
+---
+- hosts: server
+  gather_facts: false
+  vars_files:
+    - vault.yml
+  roles:
+#    - deploy-mosquitto
+#    - deploy-homeassistant
+#    - deploy-nodered
+    - chirpstack-gateway-bridge
+#    - chirpstack-network-server
+#    - chirpstack-application-server
+    - chirpstack-v4
+#    - pi-hole
+#    - thingsboard
+#    - nextcloud
+#    - syncthing
+#    - dynv6
+#    - wireguard

@@ -1,0 +1,21 @@
+---
+- name: create postgres data directory
+  ansible.builtin.file:
+    path: "{{ postgres_data_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: re-create postgres container for  {{ postgres_instance_name }}
+  docker_container:
+    name: "PostgresDB-{{ postgres_instance_name }}"
+    image: postgres:9.6-alpine
+    state: started
+    recreate: yes
+    restart_policy: always
+    ports:
+     - "{{ postgres_instance_port }}:5432"
+    volumes:
+      - "{{ postgres_config_dir }}:/docker-entrypoint-initdb.d"
+      - "{{ postgres_data_dir }}:/var/lib/postgresql/data"
+    env:
+      POSTGRES_PASSWORD: "{{ postgres_root_password }}"

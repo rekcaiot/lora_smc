@@ -1,0 +1,13 @@
+---
+- name: create postgres config directory
+  ansible.builtin.file:
+    path: "{{ postgres_config_dir }}"
+    state: directory
+    mode: '0755'
+- name: template chirpstack ns postgres config
+  ansible.builtin.template:
+    src: 001-init-chirpstack_ns.sh.j2
+    dest: "{{ postgres_config_dir }}/001-init-chirpstack_ns.sh"
+    owner: "{{ postgres_owner }}"
+    group: "{{ postgres_group }}"
+    mode: '0744'

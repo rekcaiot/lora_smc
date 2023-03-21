@@ -1,0 +1,2 @@
+[server]
+192.168.178.86 ansible_ssh_pass="{{ ansible_ssh_password }}"

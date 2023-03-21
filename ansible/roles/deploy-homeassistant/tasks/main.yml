@@ -1,0 +1,17 @@
+---
+- name: create homeassistant directory
+  ansible.builtin.file:
+    path: "{{ homeassistant_home_dir }}"
+    state: directory
+    mode: '0755'
+- name: re-create homeassistant container
+  docker_container:
+    name: Homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    state: started
+    recreate: yes
+    restart_policy: always
+    network_mode: host
+    volumes:
+      - /opt/homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro

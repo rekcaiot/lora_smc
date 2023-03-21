@@ -1,0 +1,2 @@
+---
+- include_tasks: network-server-deploy.yml

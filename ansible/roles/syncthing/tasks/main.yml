@@ -1,0 +1,26 @@
+---
+- name: create syncthing dir
+  ansible.builtin.file:
+    path: "{{ syncthing_home_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: re-create syncthing container
+  docker_container:
+    name: Syncthing
+    image: lscr.io/linuxserver/syncthing:latest
+    state: started
+    recreate: yes
+    restart_policy: unless-stopped
+    ports:
+      - "8384:8384/tcp"
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp
+    volumes:
+      - "{{ syncthing_home_dir }}:/config"
+      - "/opt/backups/Dokumente:/config/Dokumente"
+    env:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: "Europe/Berlin"

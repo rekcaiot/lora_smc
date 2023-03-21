@@ -1,0 +1,4 @@
+---
+chirpstack_gateway_bridge_dir: /opt/chirpstack-gateway-bridge
+chirpstack_owner: root
+chirpstack_group: root

@@ -1,0 +1,8 @@
+---
+chirpstack_application_server_dir: /opt/chirpstack-application-server
+chirpstack_owner: root
+chirpstack_group: root
+postgres_name: chirpstack-as
+postgres_port: 5556
+redis_name: chirpstack
+redis_port: 6666

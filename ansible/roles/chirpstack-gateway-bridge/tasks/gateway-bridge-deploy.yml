@@ -1,0 +1,23 @@
+---
+- name: create chirpstack gateway bridge config directory
+  ansible.builtin.file:
+    path: "{{ chirpstack_gateway_bridge_dir }}"
+    state: directory
+    mode: '0755'
+- name: copy chirpstack gateway bridge config
+  ansible.builtin.template:
+    src: chirpstack-gateway-bridge.toml
+    dest: "{{ chirpstack_gateway_bridge_dir }}/chirpstack-gateway-bridge.toml"
+    owner: "{{ chirpstack_owner }}"
+    group: "{{ chirpstack_group }}"
+    mode: '0644'
+- name: re-create gateway bridge container
+  docker_container:
+    name: ChirpstackGatewayBridge
+    image: chirpstack/chirpstack-gateway-bridge:4.0.5
+    state: started
+    recreate: yes
+    restart_policy: always
+    network_mode: host
+    volumes:
+      - "{{ chirpstack_gateway_bridge_dir }}:/etc/chirpstack-gateway-bridge"

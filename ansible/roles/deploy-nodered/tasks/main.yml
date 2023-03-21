@@ -1,0 +1,81 @@
+---
+- name: create nodered directory
+  ansible.builtin.file:
+    path: "{{ nodered_home_dir }}"
+    state: directory
+    mode: '0755'
+- name: copy settings file
+  ansible.builtin.copy:
+    src: settings.js
+    dest: "{{ nodered_home_dir }}/settings.js"
+    owner: "{{ nodered_owner }}"
+    group: "{{ nodered_group }}"
+    mode: '0644'
+- name: copy flows file
+  ansible.builtin.copy:
+    src: flows.json
+    dest: "{{ nodered_home_dir }}/flows.json"
+    owner: "{{ nodered_owner }}"
+    group: "{{ nodered_group }}"
+    mode: '0644'
+- name: copy flows_cred file
+  ansible.builtin.copy:
+    src: flows_cred.json
+    dest: "{{ nodered_home_dir }}/flows_cred.json"
+    owner: "{{ nodered_owner }}"
+    group: "{{ nodered_group }}"
+    mode: '0644'
+- name: copy package file
+  ansible.builtin.copy:
+    src: package.json
+    dest: "{{ nodered_home_dir }}/package.json"
+    owner: "{{ nodered_owner }}"
+    group: "{{ nodered_group }}"
+    mode: '0644'
+- name: template projects config to remote host
+  ansible.builtin.template:
+    src: .config.projects.json.j2
+    dest: "{{ nodered_home_dir }}/.config.projects.json"
+    owner: "{{ nodered_owner }}"
+    group: "{{ nodered_group }}"
+    mode: '0644'
+- name: template runtime config to remote host
+  ansible.builtin.template:
+    src: .config.runtime.json.j2
+    dest: "{{ nodered_home_dir }}/.config.runtime.json"
+    owner: "{{ nodered_owner }}"
+    group: "{{ nodered_group }}"
+    mode: '0644'
+#- name: create projects directory
+#  ansible.builtin.file:
+#    path: "{{ nodered_home_dir }}/projects"
+#    state: directory
+#    mode: '0755'
+#- name: clone github project
+#  ansible.builtin.git:
+#    repo: "https://rekcaiot:{{ git_token }}@github.com/rekcaiot/rekca.home.git"
+#    dest: "{{ nodered_home_dir }}/projects/rekcaiot"
+
+- name: Install the nodejs
+  apt:
+    name: nodejs
+    state: present
+- name: Install the npm
+  apt:
+    name: npm
+    state: present
+
+- name: Install packages based on package.json.
+  community.general.npm:
+    path: "{{ nodered_home_dir }}"
+- name: re-create nodered container
+  docker_container:
+    name: Node-RED
+    image: nodered/node-red
+    state: started
+    user: root:root
+    recreate: yes
+    restart_policy: always
+    network_mode: host
+    volumes:
+      - /opt/nodered:/data
